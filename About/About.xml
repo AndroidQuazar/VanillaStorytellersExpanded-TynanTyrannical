@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Vanilla Storytellers Expanded - Tynan Tyrannical</name>
+    <author>Oskar Potocki, Smash Phil</author>
+    <url></url>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>VSE.TynanTyrannical</packageId>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
+<description>Vanilla Storytellers Expanded is a brand new mod series featuring standalone storytellers, bringing new, unique mechanics to the game.
+
+"Tynan Tyrannical holds no regard for ongoing stories. Things will turn on their heads countless times before a colony goes down in flames. Frequently released Patch notes can alter the values of the game, changing almost anything in the game completely by a random number."
+
+Tynan Tyrannical comes with the following traits:
+
+Patch Notes
+This storyteller releases patch notes every few days, changing the game drastically. Patch notes change random values of random Defs into random numbers. This can result in items becoming incredibly unbalanced, overpowered or worthless.
+
+Hard Difficulty
+This storyteller has hard difficulty. It will favour bad events, and any events that happen are tailored to your colony based on it’s wealth, past events, amount of colonists and other factors.
+
+Random Events
+This storyteller will fire random events without any regard for how your colony is doing. Whilst the events still scale with wealth, their type - good, neutral, bad - is completely random, just like with Randy.</description>
+	<modDependencies>
+        <li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
