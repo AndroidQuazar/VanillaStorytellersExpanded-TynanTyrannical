@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+	<!-- Labels -->
+	<TynanTyrannical>Tynan Tyrannical</TynanTyrannical>
+	<PatchNotes>New Update Released</PatchNotes>
+	
+	<!-- Patch Window -->
+	<ValueChanged>{0} changed from {1} to {2}</ValueChanged>
+	
+	<!-- Settings -->
+	<ShowAllPatchNotes>Show Patch Notes</ShowAllPatchNotes>
+	<ShowAllPatchNotesTooltip>Displays the last 5 patch notes released.</ShowAllPatchNotesTooltip>
+	<DebugShowPatchGeneration>Output Patch Generation</DebugShowPatchGeneration>
+	<DebugShowPatchGenerationTooltip>Output into Message logs all patch generation steps. (FOR DEBUGGING ONLY)</DebugShowPatchGenerationTooltip>
+</LanguageData>

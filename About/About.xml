@@ -24,11 +24,4 @@ This storyteller has hard difficulty. It will favour bad events, and any events 
 
 Random Events
 This storyteller will fire random events without any regard for how your colony is doing. Whilst the events still scale with wealth, their type - good, neutral, bad - is completely random, just like with Randy.</description>
-	<modDependencies>
-        <li>
-			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-			<displayName>Vanilla Expanded Framework</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
-		</li>
-	</modDependencies>
 </ModMetaData>
