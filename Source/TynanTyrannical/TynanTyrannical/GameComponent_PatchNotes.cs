@@ -16,6 +16,8 @@ namespace TynanTyrannical
         private List<Pair<Def, FieldInfo>> keys = new List<Pair<Def, FieldInfo>>();
         private List<object> values = new List<object>();
 
+        private bool storytellerLoaded = false;
+
         public static GameComponent_PatchNotes Instance { get; private set; }
 
         public GameComponent_PatchNotes(Game game)
@@ -31,7 +33,7 @@ namespace TynanTyrannical
         public override void LoadedGame()
         {
             base.LoadedGame();
-            if (!currentDefValues.EnumerableNullOrEmpty())
+            if (!currentDefValues.EnumerableNullOrEmpty() && storytellerLoaded)
             {
                 ResetPatchNoteValues();
             }
@@ -45,16 +47,23 @@ namespace TynanTyrannical
             {
                 patchNotes = new List<PatchInfo>();
             }
-            SetInitialValues();
+            storytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
+            if (storytellerLoaded)
+            {
+                SetInitialValues();
+            }
         }
 
         public override void GameComponentTick()
         {
             base.GameComponentTick();
-            timeTillNextPatchNotes--;
-            if (timeTillNextPatchNotes <= 0)
+            if (storytellerLoaded)
             {
-                InitiatePatchNotes();
+                timeTillNextPatchNotes--;
+                if (timeTillNextPatchNotes <= 0)
+                {
+                    InitiatePatchNotes();
+                }
             }
         }
 
@@ -82,17 +91,20 @@ namespace TynanTyrannical
             {
                 currentDefValues = new Dictionary<DefPatchPair, float>();
             }
-            foreach (var defValues in PatchNotes.possibleDefs)
+            if (storytellerLoaded)
             {
-                Def def = defValues.Key;
-                foreach (var patchData in defValues.Value)
+                foreach (var defValues in PatchNotes.possibleDefs)
                 {
-                    PatchRange patch = patchData.Second;
-                    object parent = patchData.First;
-                    if (!currentDefValues.ContainsKey(new DefPatchPair(def.defName, patch.FieldInfo)))
+                    Def def = defValues.Key;
+                    foreach (var patchData in defValues.Value)
                     {
-                        float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
-                        currentDefValues.Add(new DefPatchPair(def.defName, patch.FieldInfo), baseValue);
+                        PatchRange patch = patchData.Second;
+                        object parent = patchData.First;
+                        if (!currentDefValues.ContainsKey(new DefPatchPair(def.defName, patch.FieldInfo)))
+                        {
+                            float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
+                            currentDefValues.Add(new DefPatchPair(def.defName, patch.FieldInfo), baseValue);
+                        }
                     }
                 }
             }
@@ -100,26 +112,29 @@ namespace TynanTyrannical
 
         private void ResetPatchNoteValues()
         {
-            foreach (var defValues in PatchNotes.possibleDefs)
+            if (storytellerLoaded)
             {
-                Def def = defValues.Key;
-                foreach (var patchData in defValues.Value)
+                foreach (var defValues in PatchNotes.possibleDefs)
                 {
-                    PatchRange patch = patchData.Second;
-                    object parent = patchData.First;
-                    if (currentDefValues.TryGetValue(new DefPatchPair(def.defName, patch.FieldInfo), out float value))
+                    Def def = defValues.Key;
+                    foreach (var patchData in defValues.Value)
                     {
-                        float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
-                        if (!baseValue.Equals(value))
+                        PatchRange patch = patchData.Second;
+                        object parent = patchData.First;
+                        if (currentDefValues.TryGetValue(new DefPatchPair(def.defName, patch.FieldInfo), out float value))
                         {
-                            try
+                            float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
+                            if (!baseValue.Equals(value))
                             {
-                                object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
-                                patch.FieldInfo.SetValue(parent, valueConverted);
-                            }
-                            catch (Exception ex)
-                            {
-                                Log.Error($"Exception thrown for {def.defName} field={patch.name}\nFailed to convert {baseValue.GetType()} to {value.GetType()}. Exception=\"{ex.Message}\"");
+                                try
+                                {
+                                    object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
+                                    patch.FieldInfo.SetValue(parent, valueConverted);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Log.Error($"Exception thrown for {def.defName} field={patch.name}\nFailed to convert {baseValue.GetType()} to {value.GetType()}. Exception=\"{ex.Message}\"");
+                                }
                             }
                         }
                     }

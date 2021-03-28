@@ -2,7 +2,7 @@
 <Defs>
 
 	<StorytellerDef ParentName="BaseStoryteller">
-		<defName>VSE-TynanTyrannical</defName>
+		<defName>VSE_TynanTyrannical</defName>
 		<label>Tynan Tyrannical</label>
 		<description>Tynan Tyrannical holds no regard for ongoing stories. Things will turn on their heads countless times before a colony goes down in flames. Frequently released Patch notes can alter the values of the game, changing almost anything in the game completely by a random number.</description>
 		<portraitLarge>UI/Storytellers/TynanTyrannical</portraitLarge>

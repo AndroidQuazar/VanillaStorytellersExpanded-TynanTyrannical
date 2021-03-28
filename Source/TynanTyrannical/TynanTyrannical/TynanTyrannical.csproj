@@ -58,6 +58,7 @@
     <Compile Include="PatchInfo.cs" />
     <Compile Include="PatchLetter.cs" />
     <Compile Include="FormattingPropertiesDefOf.cs" />
+    <Compile Include="StorytellerDefOf.cs" />
     <Compile Include="PatchLetterDefOf.cs" />
     <Compile Include="PatchNotes.cs" />
     <Compile Include="PatchStatRange.cs" />
