@@ -44,7 +44,7 @@ namespace TynanTyrannical
             var font = Text.Font;
 
             lister.BeginScrollView(rect, ref scrollPosition, ref viewRect);
-            foreach (PatchInfo patchNote in TTMod.settings.patchNotes)
+            foreach (PatchInfo patchNote in GameComponent_PatchNotes.Instance.patchNotes)
             {
                 Text.Font = GameFont.Medium;
                 lister.Label(patchNote.dateOfPatch);
@@ -61,13 +61,13 @@ namespace TynanTyrannical
             float patchNotesHeight = 0;
             var font = Text.Font;
             int i = 0;
-            foreach (PatchInfo patchNote in TTMod.settings.patchNotes)
+            foreach (PatchInfo patchNote in GameComponent_PatchNotes.Instance.patchNotes)
             {
                 i++;
                 Text.Font = GameFont.Medium;
                 patchNotesHeight += Text.CalcHeight(patchNote.dateOfPatch, WindowWidth - WindowContractBy);
                 Text.Font = GameFont.Small;
-                patchNotesHeight += Text.CalcHeight(patchNote.text, WindowWidth - (WindowContractBy + ScrollbarPadding));
+                patchNotesHeight += Text.CalcHeight(patchNote.text, WindowWidth - (WindowContractBy + ScrollbarPadding)) + 5;
             }
             PatchNotesHeight = patchNotesHeight;
             Text.Font = font;

@@ -50,18 +50,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTools.cs" />
+    <Compile Include="DefPatchPair.cs" />
     <Compile Include="FieldTypeDef.cs" />
     <Compile Include="FormattingPropertiesDef.cs" />
     <Compile Include="GameComponent_PatchNotes.cs" />
+    <Compile Include="PatchDef.cs" />
     <Compile Include="PatchInfo.cs" />
     <Compile Include="PatchLetter.cs" />
     <Compile Include="FormattingPropertiesDefOf.cs" />
     <Compile Include="PatchLetterDefOf.cs" />
     <Compile Include="PatchNotes.cs" />
+    <Compile Include="PatchStatRange.cs" />
     <Compile Include="PatchRange.cs" />
     <Compile Include="PatchTypeDef.cs" />
     <Compile Include="PatchWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatPatchDef.cs" />
     <Compile Include="TTModSettings.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Verse;
 using RimWorld;
 
@@ -8,7 +9,13 @@ namespace TynanTyrannical
 {
     public class GameComponent_PatchNotes : GameComponent
     {
-        internal int timeTillNextPatchNotes;
+        public int timeTillNextPatchNotes;
+        public Dictionary<DefPatchPair, float> currentDefValues = new Dictionary<DefPatchPair, float>();
+        public List<PatchInfo> patchNotes = new List<PatchInfo>();
+
+        private List<Pair<Def, FieldInfo>> keys = new List<Pair<Def, FieldInfo>>();
+        private List<object> values = new List<object>();
+
         public static GameComponent_PatchNotes Instance { get; private set; }
 
         public GameComponent_PatchNotes(Game game)
@@ -21,10 +28,24 @@ namespace TynanTyrannical
             timeTillNextPatchNotes = TTMod.settings.ticksBetweenPatchNotes;
         }
 
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+            if (!currentDefValues.EnumerableNullOrEmpty())
+            {
+                ResetPatchNoteValues();
+            }
+        }
+
         public override void FinalizeInit()
         {
             base.FinalizeInit();
             Instance = this;
+            if (patchNotes is null)
+            {
+                patchNotes = new List<PatchInfo>();
+            }
+            SetInitialValues();
         }
 
         public override void GameComponentTick()
@@ -45,10 +66,73 @@ namespace TynanTyrannical
             Rand.PopState();
         }
 
+        public void RegisterPatch(string notes)
+        {
+            if (patchNotes.Count >= TTMod.settings.patchNotesStored)
+            {
+                int index = TTMod.settings.patchNotesStored - 1;
+                patchNotes.RemoveRange(index, patchNotes.Count - index);
+            }
+            patchNotes.Insert(0, new PatchInfo(notes));
+        }
+
+        private void SetInitialValues()
+        {
+            if (currentDefValues is null)
+            {
+                currentDefValues = new Dictionary<DefPatchPair, float>();
+            }
+            foreach (var defValues in PatchNotes.possibleDefs)
+            {
+                Def def = defValues.Key;
+                foreach (var patchData in defValues.Value)
+                {
+                    PatchRange patch = patchData.Second;
+                    object parent = patchData.First;
+                    if (!currentDefValues.ContainsKey(new DefPatchPair(def.defName, patch.FieldInfo)))
+                    {
+                        float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
+                        currentDefValues.Add(new DefPatchPair(def.defName, patch.FieldInfo), baseValue);
+                    }
+                }
+            }
+        }
+
+        private void ResetPatchNoteValues()
+        {
+            foreach (var defValues in PatchNotes.possibleDefs)
+            {
+                Def def = defValues.Key;
+                foreach (var patchData in defValues.Value)
+                {
+                    PatchRange patch = patchData.Second;
+                    object parent = patchData.First;
+                    if (currentDefValues.TryGetValue(new DefPatchPair(def.defName, patch.FieldInfo), out float value))
+                    {
+                        float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
+                        if (!baseValue.Equals(value))
+                        {
+                            try
+                            {
+                                object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
+                                patch.FieldInfo.SetValue(parent, valueConverted);
+                            }
+                            catch (Exception ex)
+                            {
+                                Log.Error($"Exception thrown for {def.defName} field={patch.name}\nFailed to convert {baseValue.GetType()} to {value.GetType()}. Exception=\"{ex.Message}\"");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref timeTillNextPatchNotes, "timeTillNextPatchNotes");
+            Scribe_Collections.Look(ref currentDefValues, "currentDefValues", LookMode.Deep, LookMode.Value);
+            Scribe_Collections.Look(ref patchNotes, "patchNotes", LookMode.Deep);
         }
     }
 }

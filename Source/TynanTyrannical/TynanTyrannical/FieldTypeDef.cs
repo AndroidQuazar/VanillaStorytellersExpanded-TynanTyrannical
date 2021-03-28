@@ -4,9 +4,8 @@ using Verse;
 
 namespace TynanTyrannical
 {
-    public class FieldTypeDef : Def
+    public class FieldTypeDef : PatchDef
     {
-        public Type type;
         public List<PatchRange> fields = new List<PatchRange>();
 
         public override IEnumerable<string> ConfigErrors()
@@ -14,10 +13,6 @@ namespace TynanTyrannical
             foreach (string error in base.ConfigErrors())
             {
                 yield return error;
-            }
-            if (type is null)
-            {
-                yield return $"<color=teal>type</color> cannot be null.";
             }
             foreach (PatchRange field in fields)
             {

@@ -13,11 +13,9 @@ namespace TynanTyrannical
         public int fieldsChangedPerPatch = 1;
         public int defsChangedPerPatch = 5;
 
+        public int patchNotesStored = 10;
+
         public bool debugShowPatchGeneration = false;
-
-        public Dictionary<Def, float> currentDefValues = new Dictionary<Def, float>();
-
-        internal List<PatchInfo> patchNotes = new List<PatchInfo>();
 
         public override void ExposeData()
         {
@@ -27,9 +25,6 @@ namespace TynanTyrannical
             Scribe_Values.Look(ref defsChangedPerPatch, "defsChangedPerPatch", 5);
 
             Scribe_Values.Look(ref debugShowPatchGeneration, "debugShowPatchGeneration", false);
-
-            Scribe_Collections.Look(ref currentDefValues, "currentDefValues", LookMode.Def, LookMode.Value);
-            //Scribe_Collections.Look(ref patchNotes, "patchNotes", LookMode.Deep);
         }
     }
 

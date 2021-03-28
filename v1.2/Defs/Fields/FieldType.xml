@@ -116,8 +116,8 @@
 			<li>
 				<name>joy</name>
 				<range>0~3</range>
-				<limits>-10~10</limits>
-				<formatting>WholeNumber</formatting>
+				<limits>-0.15~0.15</limits>
+				<formatting>Decimal</formatting>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>

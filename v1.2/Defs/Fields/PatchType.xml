@@ -13,6 +13,9 @@
 				<formatting>WholeNumberRounded</formatting>
 			</li>
 			<li>
+				<name>statBases</name>
+			</li>
+			<li>
 				<name>building</name>
 			</li>
 			<li>

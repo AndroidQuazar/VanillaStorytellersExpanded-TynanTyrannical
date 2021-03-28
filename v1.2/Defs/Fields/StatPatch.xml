@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TynanTyrannical.StatPatchDef Name="StatPatchBase" Abstract="True">
+		<type>StatModifier</type>
+		<patch>
+			<weightToPatch>0.01</weightToPatch>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_Mass</defName>
+		<statDef>Mass</statDef>
+		<patch>
+			<name>value</name>
+			<label>Mass</label>
+			<range>0~3</range>
+			<limits>0.01~99999</limits>
+			<formatting>Decimal</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_MaxHitPoints</defName>
+		<statDef>MaxHitPoints</statDef>
+		<patch>
+			<name>value</name>
+			<label>MaxHitPoints</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<formatting>WholeNumber</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_MarketValue</defName>
+		<statDef>MarketValue</statDef>
+		<patch>
+			<name>value</name>
+			<label>MarketValue</label>
+			<range>0~3</range>
+			<limits>0~99999</limits>
+			<formatting>WholeNumber</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_SellPriceFactor</defName>
+		<statDef>SellPriceFactor</statDef>
+		<patch>
+			<name>value</name>
+			<label>SellPriceFactor</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<formatting>Percentage</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_WorkToMake</defName>
+		<statDef>WorkToMake</statDef>
+		<patch>
+			<name>value</name>
+			<label>WorkToMake</label>
+			<range>0~3</range>
+			<limits>1~9999999</limits>
+			<formatting>WholeNumber</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_Beauty</defName>
+		<statDef>Beauty</statDef>
+		<patch>
+			<name>value</name>
+			<label>Beauty</label>
+			<range>-3~3</range>
+			<limits>-999~999</limits>
+			<formatting>WholeNumber</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_Nutrition</defName>
+		<statDef>Nutrition</statDef>
+		<patch>
+			<name>value</name>
+			<label>Nutrition</label>
+			<range>0~1</range>
+			<limits>0.01~1</limits>
+			<ignoreIfValue>0</ignoreIfValue>
+			<multiplier>false</multiplier>
+			<formatting>Decimal</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+	
+	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_ShootingAccuracyTurret</defName>
+		<statDef>ShootingAccuracyTurret</statDef>
+		<patch>
+			<name>value</name>
+			<label>ShootingAccuracyTurret</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<formatting>Percentage</formatting>
+		</patch>
+	</TynanTyrannical.StatPatchDef>
+</Defs>

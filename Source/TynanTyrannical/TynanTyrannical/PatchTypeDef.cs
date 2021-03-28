@@ -4,9 +4,8 @@ using Verse;
 
 namespace TynanTyrannical
 {
-    public class PatchTypeDef : Def
+    public class PatchTypeDef : PatchDef
     {
-        public Type type;
         public List<PatchRange> fields = new List<PatchRange>();
 
         public override IEnumerable<string> ConfigErrors()
@@ -15,11 +14,7 @@ namespace TynanTyrannical
             {
                 yield return error;
             }
-            if (type is null)
-            {
-                yield return $"<color=teal>type</color> cannot be null.";
-            }
-            else if (!typeof(Def).IsAssignableFrom(type))
+            if (!typeof(Def).IsAssignableFrom(type))
             {
                 yield return $"<color=teal>type</color> in PatchTypeDef must be a <color=orange>Def</color> type.";
             }

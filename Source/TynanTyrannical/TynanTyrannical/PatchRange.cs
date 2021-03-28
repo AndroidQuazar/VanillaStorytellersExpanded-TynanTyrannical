@@ -30,10 +30,7 @@ namespace TynanTyrannical
                 randValue *= originalValues[def];
             }
             randValue = randValue.RoundTo(formatting.setValueRoundTo);
-            if (TTMod.settings.debugShowPatchGeneration)
-            {
-                Log.Message($"Setting {name} to new value {randValue}. Range: {range} IgnoreIfValue: {ignoreIfValue} Multiplier: {multiplier}");
-            }
+            GameComponent_PatchNotes.Instance.currentDefValues[new DefPatchPair(def.defName, FieldInfo)] = randValue;
             return randValue;
         }
 
@@ -48,7 +45,12 @@ namespace TynanTyrannical
             return $"{formatting.startSymbol}{numericValue.RoundTo(formatting.roundTo)}{formatting.endSymbol}";
         }
 
-        public void ResolveReferences(Type type)
+        public virtual string PatchNoteText(object oldValue, object newValue)
+        {
+            return TranslatorFormattedStringExtensions.Translate("ValueChanged", name, FormatValue(oldValue), FormatValue(newValue));
+        }
+
+        public virtual void ResolveReferences(Type type)
         {
             FieldInfo fieldInfo = type.GetField(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             if (fieldInfo is null)

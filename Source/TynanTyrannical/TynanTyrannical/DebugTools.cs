@@ -6,7 +6,7 @@ using RimWorld;
 
 namespace TynanTyrannical
 {
-    public class DebugTools
+    public static class DebugTools
     {
         [DebugAction("Tynan Tyrannical", "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesSingle()
@@ -34,6 +34,18 @@ namespace TynanTyrannical
                     Find.WindowStack.Add(new Dialog_DebugOptionListLister(list2));
 		        }));
 	        }
+            list.Add(new DebugMenuOption("Stats", DebugMenuOptionMode.Action, delegate ()
+            {
+                List<DebugMenuOption> list2 = new List<DebugMenuOption>();
+                foreach (StatPatchDef statPatchDef in DefDatabase<StatPatchDef>.AllDefs)
+                {
+                    list2.Add(new DebugMenuOption(statPatchDef.defName, DebugMenuOptionMode.Action, delegate ()
+                    {
+                        PatchNotes.ForceSpecificPatchNotes(statPatchDef);
+                    }));
+                }
+                Find.WindowStack.Add(new Dialog_DebugOptionListLister(list2));
+            }));
             if (list.NullOrEmpty())
             {
                 Messages.Message("Cannot execute, no PatchTypeDefs loaded.", MessageTypeDefOf.RejectInput);
@@ -60,7 +72,7 @@ namespace TynanTyrannical
         [DebugAction("Tynan Tyrannical", "Clear Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void ClearPatchNotes()
         {
-            TTMod.settings.patchNotes.Clear();
+            GameComponent_PatchNotes.Instance.patchNotes.Clear();
         }
     }
 }

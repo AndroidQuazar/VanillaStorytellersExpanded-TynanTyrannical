@@ -13,6 +13,10 @@ namespace TynanTyrannical
         public string dateOfPatch;
         public string text;
 
+        public PatchInfo()
+        {
+        }
+
         public PatchInfo(string text)
         {
             Vector2 location = Find.CurrentMap != null ? Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile) : default;
