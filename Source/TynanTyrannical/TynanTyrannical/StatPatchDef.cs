@@ -20,6 +20,10 @@ namespace TynanTyrannical
         public void ResolveStatDef()
         {
             StatDef = DefDatabase<StatDef>.GetNamed(statDef);
+            if (StatDef.forInformationOnly)
+            {
+                Log.Warning($"Resolving stat <color=teal>{StatDef.defName}</color> when it's marked as <b>For Information Only</b>");
+            }
             patch.ResolveReferences(type);
         }
 

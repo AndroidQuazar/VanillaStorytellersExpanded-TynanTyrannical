@@ -1,21 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef Name="StatPatchBase" Abstract="True">
-		<type>StatModifier</type>
-		<patch>
-			<name>value</name>
-			<weightToPatch>0.01</weightToPatch>
-		</patch>
-	</TynanTyrannical.StatPatchDef>
-	
-	<TynanTyrannical.StatPatchDef Name="StatPatchGenericBase" Abstract="True">
-		<type>StatDef</type>
-		<patch Class="TynanTyrannical.PatchRangeStatDefault">
-			<name>defaultBaseValue</name>
-			<applyToDef>true</applyToDef>
-		</patch>
-	</TynanTyrannical.StatPatchDef>
-
 	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_Mass</defName>
 		<statDef>Mass</statDef>

@@ -66,6 +66,7 @@ namespace TynanTyrannical
             {
                 i++;
                 Text.Font = GameFont.Medium;
+                patchNotesHeight += Text.CalcHeight(patchNote.title, WindowWidth - WindowContractBy);
                 patchNotesHeight += Text.CalcHeight(patchNote.dateOfPatch, WindowWidth - WindowContractBy);
                 Text.Font = GameFont.Small;
                 patchNotesHeight += Text.CalcHeight(patchNote.text, WindowWidth - (WindowContractBy + ScrollbarPadding)) + 5;

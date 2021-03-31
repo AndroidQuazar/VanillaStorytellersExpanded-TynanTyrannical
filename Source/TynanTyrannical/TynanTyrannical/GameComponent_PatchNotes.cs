@@ -50,11 +50,11 @@ namespace TynanTyrannical
             {
                 patchNotes = new List<PatchInfo>();
             }
-            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
-            if (StorytellerLoaded)
+            if (currentDefValues is null)
             {
-                SetInitialValues();
+                currentDefValues = new Dictionary<DefPatchPair, float>();
             }
+            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
         }
 
         public override void GameComponentTick()
@@ -88,31 +88,6 @@ namespace TynanTyrannical
             patchNotes.Insert(0, new PatchInfo(notes));
         }
 
-        private void SetInitialValues()
-        {
-            if (currentDefValues is null)
-            {
-                currentDefValues = new Dictionary<DefPatchPair, float>();
-            }
-            if (StorytellerLoaded)
-            {
-                foreach (var defValues in PatchNotes.possibleDefs)
-                {
-                    Def def = defValues.Key;
-                    foreach (var patchData in defValues.Value)
-                    {
-                        PatchRange patch = patchData.Second;
-                        object parent = patchData.First;
-                        if (!currentDefValues.ContainsKey(new DefPatchPair(def.defName, patch.FieldInfo)))
-                        {
-                            float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
-                            currentDefValues.Add(new DefPatchPair(def.defName, patch.FieldInfo), baseValue);
-                        }
-                    }
-                }
-            }
-        }
-
         private void ResetPatchNoteValues()
         {
             if (StorytellerLoaded)
@@ -132,6 +107,7 @@ namespace TynanTyrannical
                                 try
                                 {
                                     object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
+                                    //Log.Message($"Def: {def} Field: {patch.DisplayName} Default: {baseValue} Stored: {valueConverted}");
                                     patch.FieldInfo.SetValue(parent, valueConverted);
                                 }
                                 catch (Exception ex)

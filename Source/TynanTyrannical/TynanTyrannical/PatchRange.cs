@@ -35,7 +35,6 @@ namespace TynanTyrannical
                 randValue *= originalValues[def];
             }
             randValue = randValue.RoundTo(roundTo);
-            GameComponent_PatchNotes.Instance.currentDefValues[new DefPatchPair(def.defName, FieldInfo)] = randValue;
             return randValue;
         }
 

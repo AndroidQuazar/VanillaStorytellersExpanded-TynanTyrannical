@@ -16,9 +16,8 @@ namespace TynanTyrannical
         internal static readonly Dictionary<Def, List<Pair<object, PatchRange>>> possibleDefs = new Dictionary<Def, List<Pair<object, PatchRange>>>();
         internal static readonly Dictionary<Def, float> defWeights = new Dictionary<Def, float>();
 
-        private static readonly Dictionary<Type, FieldTypeDef> nestedTypes = new Dictionary<Type, FieldTypeDef>();
-
-        private static readonly List<Pair<object, PatchRange>> patchableFields = new List<Pair<object, PatchRange>>();
+        public static readonly Dictionary<Type, FieldTypeDef> nestedTypes = new Dictionary<Type, FieldTypeDef>();
+        public static readonly List<Pair<object, PatchRange>> patchableFields = new List<Pair<object, PatchRange>>();
 
         private static readonly List<string> defsAffected = new List<string>();
         private static readonly List<string> fieldsAffected = new List<string>();
@@ -115,7 +114,8 @@ namespace TynanTyrannical
         private static void PatchFields(KeyValuePair<Def, List<Pair<object, PatchRange>>> defPair, StringBuilder stringBuilder)
         {
             defsAffected.Add(defPair.Key.defName);
-            stringBuilder.AppendLine($"<color=green>{defPair.Key.LabelCap}</color>");
+            string displayLabel = string.IsNullOrEmpty(defPair.Key.LabelCap) ? defPair.Key.defName : defPair.Key.LabelCap.ToString();
+            stringBuilder.AppendLine($"<color=green>{displayLabel}</color>");
             fieldsAffected.Clear();
             for (int j = 0; j < Mathf.Min(TTMod.settings.fieldsChangedPerDef, defPair.Value.Count); j++)
             {
@@ -138,6 +138,12 @@ namespace TynanTyrannical
                 {
                     patch.FieldInfo.SetValue(parent, valueConverted);
                     stringBuilder.AppendLine(patch.PatchNoteChanged(oldValue, valueConverted));
+                    var defPatch = new DefPatchPair(defPair.Key.defName, patch.FieldInfo);
+                    if (!GameComponent_PatchNotes.Instance.currentDefValues.ContainsKey(new DefPatchPair(defPair.Key.defName, patch.FieldInfo)))
+                    {
+                        GameComponent_PatchNotes.Instance.currentDefValues.Add(defPatch, value);
+                    }
+                    GameComponent_PatchNotes.Instance.currentDefValues[defPatch] = value;
                 }
                 else
                 {
@@ -221,9 +227,21 @@ namespace TynanTyrannical
                             }
                         }
                     }
+                    else if (patch.FieldInfo.FieldType == typeof(List<VerbProperties>))
+                    {
+                        List<VerbProperties> verbs = (List<VerbProperties>)patch.FieldInfo.GetValue(parent);
+                        if (!verbs.NullOrEmpty())
+                        { 
+                            foreach (VerbProperties verb in verbs)
+                            {
+                                FieldTypeDef verbTypeDef = nestedTypes[typeof(VerbProperties)];
+                                BuildDefList(def, verb, verbTypeDef.fields);
+                            }
+                        }
+                    }
                     else
                     {
-                        Log.Warning($"[TynanTyrannical] Unable to apply PatchNotes to {patch.name}. Field must be either a numeric type or registered as a nested type using FieldTypeDef.");
+                        Log.Warning($"[TynanTyrannical] Unable to apply PatchNotes to {patch.name}. Field must be either a numeric type or registered as a nested type using FieldTypeDef. Type=\"{patch.FieldInfo.FieldType}\"");
                     }
                 }
                 if (!patchableFields.NullOrEmpty())

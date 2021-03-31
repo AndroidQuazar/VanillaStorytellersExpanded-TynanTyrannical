@@ -40,6 +40,14 @@ namespace TynanTyrannical
                             }));
                         }
                     }
+                    foreach (PatchRange patchRange in patchTypeDef.fields.Where(p => p.FieldInfo.FieldType == typeof(List<VerbProperties>)))
+                    {
+                        FieldTypeDef verbTypeDef = PatchNotes.nestedTypes[typeof(VerbProperties)];
+                        list2.Add(new DebugMenuOption(verbTypeDef.defName, DebugMenuOptionMode.Action, delegate ()
+                        {
+                            PatchNotes.ForceSpecificPatchNotes(verbTypeDef);
+                        }));
+                    }
                     Find.WindowStack.Add(new Dialog_DebugOptionListLister(list2));
 		        }));
 	        }
