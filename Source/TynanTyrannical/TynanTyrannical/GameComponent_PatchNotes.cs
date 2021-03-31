@@ -13,9 +13,6 @@ namespace TynanTyrannical
         public Dictionary<DefPatchPair, float> currentDefValues = new Dictionary<DefPatchPair, float>();
         public List<PatchInfo> patchNotes = new List<PatchInfo>();
 
-        private List<Pair<Def, FieldInfo>> keys = new List<Pair<Def, FieldInfo>>();
-        private List<object> values = new List<object>();
-
         public static bool StorytellerLoaded { get; private set; }
 
         /* Do Not Modify */

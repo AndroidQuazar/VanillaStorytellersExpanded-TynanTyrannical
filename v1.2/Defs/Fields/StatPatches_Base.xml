@@ -13,7 +13,6 @@
 		<label>Global Stat</label>
 		<patch Class="TynanTyrannical.PatchRangeStatDefault">
 			<name>defaultBaseValue</name>
-			<applyToDef>true</applyToDef>
 		</patch>
 	</TynanTyrannical.StatPatchDef>
 </Defs>

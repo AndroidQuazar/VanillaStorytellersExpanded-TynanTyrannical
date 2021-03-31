@@ -25,6 +25,7 @@ namespace TynanTyrannical
                 Log.Warning($"Resolving stat <color=teal>{StatDef.defName}</color> when it's marked as <b>For Information Only</b>");
             }
             patch.ResolveReferences(type);
+            patch.StatPatchDef = this;
         }
 
         public override IEnumerable<string> ConfigErrors()

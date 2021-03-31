@@ -1,13 +1,26 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Linq;
 using Verse;
+using RimWorld;
+using System;
 
 namespace TynanTyrannical
 {
     public class PatchRangeStat : PatchRange
     {
-        public bool applyToDef = false;
+        public StatPatchDef StatPatchDef { get; set; }
+
+        public bool ApplyToDef(StatDef statDef)
+        {
+            foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefs)
+            {
+                if (!thingDef.statBases.NullOrEmpty() && thingDef.statBases.Any(s => s.stat == statDef))
+                {
+                    name = "value";
+                    StatPatchDef.label = string.Empty;
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
