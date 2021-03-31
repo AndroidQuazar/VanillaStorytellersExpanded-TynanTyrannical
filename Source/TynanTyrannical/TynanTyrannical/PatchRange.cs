@@ -9,6 +9,8 @@ namespace TynanTyrannical
     public class PatchRange
     {
         public string name;
+        public string label;
+
         public FloatRange range = new FloatRange(-3, 3);
         public FloatRange? limits;
         public float ignoreIfValue = -99999;
@@ -22,6 +24,8 @@ namespace TynanTyrannical
         internal Dictionary<Def, float> originalValues = new Dictionary<Def, float>();
 
         public FieldInfo FieldInfo { get; set; }
+
+        public string DisplayName => string.IsNullOrEmpty(label) ? name : label;
 
         public float NewRandomValue(Def def)
         {
@@ -47,12 +51,12 @@ namespace TynanTyrannical
 
         public virtual string PatchNoteUnchanged(object value)
         {
-            return TranslatorFormattedStringExtensions.Translate("ValueUnchanged", name, FormatValue(value));
+            return TranslatorFormattedStringExtensions.Translate("ValueUnchanged", DisplayName, FormatValue(value));
         }
 
         public virtual string PatchNoteChanged(object oldValue, object newValue)
         {
-            return TranslatorFormattedStringExtensions.Translate("ValueChanged", name, FormatValue(oldValue), FormatValue(newValue));
+            return TranslatorFormattedStringExtensions.Translate("ValueChanged", DisplayName, FormatValue(oldValue), FormatValue(newValue));
         }
 
         public virtual bool DefIsPatchable(Def def)
@@ -93,7 +97,7 @@ namespace TynanTyrannical
 
         public override string ToString()
         {
-            return $"{name}, {range}, {limits?.ToString() ?? "Null"}, {ignoreIfValue}";
+            return $"{DisplayName}, {range}, {limits?.ToString() ?? "Null"}, {ignoreIfValue}";
         }
     }
 }

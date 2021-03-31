@@ -11,6 +11,11 @@ namespace TynanTyrannical
         [DebugAction("Tynan Tyrannical", "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesSingle()
         {
+            if (!GameComponent_PatchNotes.StorytellerLoaded)
+            {
+                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                return;
+            }
             GameComponent_PatchNotes.InitiatePatchNotes();
         }
 
@@ -61,6 +66,11 @@ namespace TynanTyrannical
         [DebugAction("Tynan Tyrannical", "Send Patch Notes x5", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesBatch()
         {
+            if (!GameComponent_PatchNotes.StorytellerLoaded)
+            {
+                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                return;
+            }
             for (int i = 0; i < 5; i++)
             {
                 GameComponent_PatchNotes.InitiatePatchNotes();

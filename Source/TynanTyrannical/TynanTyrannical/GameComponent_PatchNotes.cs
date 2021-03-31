@@ -16,7 +16,7 @@ namespace TynanTyrannical
         private List<Pair<Def, FieldInfo>> keys = new List<Pair<Def, FieldInfo>>();
         private List<object> values = new List<object>();
 
-        private bool storytellerLoaded = false;
+        public static bool StorytellerLoaded { get; private set; }
 
         /* Do Not Modify */
         public PatchVersion latestVersion;
@@ -36,7 +36,7 @@ namespace TynanTyrannical
         public override void LoadedGame()
         {
             base.LoadedGame();
-            if (!currentDefValues.EnumerableNullOrEmpty() && storytellerLoaded)
+            if (!currentDefValues.EnumerableNullOrEmpty() && StorytellerLoaded)
             {
                 ResetPatchNoteValues();
             }
@@ -50,8 +50,8 @@ namespace TynanTyrannical
             {
                 patchNotes = new List<PatchInfo>();
             }
-            storytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
-            if (storytellerLoaded)
+            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
+            if (StorytellerLoaded)
             {
                 SetInitialValues();
             }
@@ -60,7 +60,7 @@ namespace TynanTyrannical
         public override void GameComponentTick()
         {
             base.GameComponentTick();
-            if (storytellerLoaded)
+            if (StorytellerLoaded)
             {
                 timeTillNextPatchNotes--;
                 if (timeTillNextPatchNotes <= 0)
@@ -94,7 +94,7 @@ namespace TynanTyrannical
             {
                 currentDefValues = new Dictionary<DefPatchPair, float>();
             }
-            if (storytellerLoaded)
+            if (StorytellerLoaded)
             {
                 foreach (var defValues in PatchNotes.possibleDefs)
                 {
@@ -115,7 +115,7 @@ namespace TynanTyrannical
 
         private void ResetPatchNoteValues()
         {
-            if (storytellerLoaded)
+            if (StorytellerLoaded)
             {
                 foreach (var defValues in PatchNotes.possibleDefs)
                 {

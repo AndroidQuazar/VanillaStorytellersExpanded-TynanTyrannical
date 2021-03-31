@@ -60,6 +60,12 @@ namespace TynanTyrannical
 
         public static void ForceSpecificPatchNotes(FieldTypeDef fieldTypeDef)
         {
+            if (!GameComponent_PatchNotes.StorytellerLoaded)
+            {
+                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                return;
+            }
+
             StringBuilder stringBuilder = new StringBuilder();
             defsAffected.Clear();
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
@@ -81,6 +87,12 @@ namespace TynanTyrannical
 
         public static void ForceSpecificPatchNotes(StatPatchDef statPatchDef)
         {
+            if (!GameComponent_PatchNotes.StorytellerLoaded)
+            {
+                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                return;
+            }
+
             StringBuilder stringBuilder = new StringBuilder();
             defsAffected.Clear();
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
@@ -103,7 +115,7 @@ namespace TynanTyrannical
         private static void PatchFields(KeyValuePair<Def, List<Pair<object, PatchRange>>> defPair, StringBuilder stringBuilder)
         {
             defsAffected.Add(defPair.Key.defName);
-            stringBuilder.AppendLine($"<color=green>{defPair.Key.defName}</color>");
+            stringBuilder.AppendLine($"<color=green>{defPair.Key.LabelCap}</color>");
             fieldsAffected.Clear();
             for (int j = 0; j < Mathf.Min(TTMod.settings.fieldsChangedPerDef, defPair.Value.Count); j++)
             {
