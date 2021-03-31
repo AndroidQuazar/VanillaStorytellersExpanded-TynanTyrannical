@@ -2,15 +2,30 @@
 
 <LanguageData>
 	<!-- Labels -->
+	<PatchTitle>RimWorld {0} "{1}"</PatchTitle>
+	<PatchTitleNoName>RimWorld {0}</PatchTitleNoName>
 	<TynanTyrannical>Tynan Tyrannical</TynanTyrannical>
 	<PatchNotes>New Update Released</PatchNotes>
 	
 	<!-- Patch Window -->
 	<ValueChanged>{0} changed from {1} to {2}</ValueChanged>
+	<ValueUnchanged>{0} will stay the same. Current value is {1}</ValueUnchanged>
+	<ValueChangedDefault>{0} defaultValue changed from {1} to {2}</ValueChangedDefault>
+	<ValueUnchangedDefault>{0} defaultValue will stay the same. Current value is {1}</ValueUnchangedDefault>
 	
 	<!-- Settings -->
-	<ShowAllPatchNotes>Show Patch Notes</ShowAllPatchNotes>
-	<ShowAllPatchNotesTooltip>Displays the last 5 patch notes released.</ShowAllPatchNotesTooltip>
-	<DebugShowPatchGeneration>Output Patch Generation</DebugShowPatchGeneration>
-	<DebugShowPatchGenerationTooltip>Output into Message logs all patch generation steps. (FOR DEBUGGING ONLY)</DebugShowPatchGenerationTooltip>
+	<TicksBetweenPatchNotes>Ticks Between Patch Notes</TicksBetweenPatchNotes>
+	<TicksBetweenPatchNotesTooltip>Ticks till the next patch notes will be released.</TicksBetweenPatchNotesTooltip>
+	
+	<DefsChangedPerPatch>Defs</DefsChangedPerPatch>
+	<DefsChangedPerPatchTooltip>Number of Defs patched per Patch Notes</DefsChangedPerPatchTooltip>
+	<FieldsChangedPerDef>Fields</FieldsChangedPerDef>
+	<FieldsChangedPerDefTooltip>Number of fields patched per Def</FieldsChangedPerDefTooltip>
+	<PatchNotesStored>Patch Notes Stored</PatchNotesStored>
+	<PatchNotesStoredTooltip>Max number of patch notes that will be stored and viewable in the Patch Notes window. It will only show the most recent patches up to this amount, but all previous patches will still apply their changes.</PatchNotesStoredTooltip>
+	
+	<ShowAllPatchNotes>Open Patch Notes</ShowAllPatchNotes>
+	<ResetPatchNotesToDefault>Reset Settings</ResetPatchNotesToDefault>
+	<DebugShowPatchGeneration>Log Patch Generation</DebugShowPatchGeneration>
+	<DebugShowPatchGenerationTooltip>Output all patch generation steps into Message logs. (For debugging only)</DebugShowPatchGenerationTooltip>
 </LanguageData>

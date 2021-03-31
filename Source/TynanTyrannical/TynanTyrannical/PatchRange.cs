@@ -11,10 +11,11 @@ namespace TynanTyrannical
         public string name;
         public FloatRange range = new FloatRange(-3, 3);
         public FloatRange? limits;
-        public float ignoreIfValue = 0;
+        public float ignoreIfValue = -99999;
         public bool multiplier = true;
 
-        public FormattingPropertiesDef formatting;
+        public ToStringStyle toStringStyle;
+        public float roundTo = 0.01f;
 
         public float weightToPatch = 1;
 
@@ -29,7 +30,7 @@ namespace TynanTyrannical
             {
                 randValue *= originalValues[def];
             }
-            randValue = randValue.RoundTo(formatting.setValueRoundTo);
+            randValue = randValue.RoundTo(roundTo);
             GameComponent_PatchNotes.Instance.currentDefValues[new DefPatchPair(def.defName, FieldInfo)] = randValue;
             return randValue;
         }
@@ -41,13 +42,22 @@ namespace TynanTyrannical
                 return "NaN";
             }
             float numericValue = Convert.ToSingle(value);
-            numericValue *= formatting.multiplyBy;
-            return $"{formatting.startSymbol}{numericValue.RoundTo(formatting.roundTo)}{formatting.endSymbol}";
+			return numericValue.ToStringByStyle(toStringStyle);
         }
 
-        public virtual string PatchNoteText(object oldValue, object newValue)
+        public virtual string PatchNoteUnchanged(object value)
+        {
+            return TranslatorFormattedStringExtensions.Translate("ValueUnchanged", name, FormatValue(value));
+        }
+
+        public virtual string PatchNoteChanged(object oldValue, object newValue)
         {
             return TranslatorFormattedStringExtensions.Translate("ValueChanged", name, FormatValue(oldValue), FormatValue(newValue));
+        }
+
+        public virtual bool DefIsPatchable(Def def)
+        {
+            return true;
         }
 
         public virtual void ResolveReferences(Type type)
@@ -67,10 +77,6 @@ namespace TynanTyrannical
                 }
             }
             FieldInfo = fieldInfo;
-            if (formatting is null)
-            {
-                formatting = FormattingPropertiesDefOf.Decimal;
-            }
         }
 
         public IEnumerable<string> ConfigErrors()

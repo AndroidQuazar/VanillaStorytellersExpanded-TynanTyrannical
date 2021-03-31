@@ -4,25 +4,46 @@ using System.Reflection;
 using Verse;
 using RimWorld;
 using UnityEngine;
+using SmashTools;
 
 namespace TynanTyrannical
 {
     public class TTModSettings : ModSettings
     {
-        public int ticksBetweenPatchNotes = 25000;
-        public int fieldsChangedPerPatch = 1;
-        public int defsChangedPerPatch = 5;
+        private const int TicksBetweenPatchNotes = 25000;
+        private const int DefsChangedPerPatch = 5;
+        private const int FieldsChangedPerDef = 1;
+        private const int PatchNotesStored = 5;
 
-        public int patchNotesStored = 10;
+        public int ticksBetweenPatchNotes = TicksBetweenPatchNotes;
+        public int defsChangedPerPatch = DefsChangedPerPatch;
+        public int fieldsChangedPerDef = FieldsChangedPerDef;
+        public int patchNotesStored = PatchNotesStored;
 
         public bool debugShowPatchGeneration = false;
+
+        /* Do Not Modify */
+        public PatchVersion latestVersion;
+
+        public void ResetToDefault()
+        {
+            ticksBetweenPatchNotes = TicksBetweenPatchNotes;
+            defsChangedPerPatch = DefsChangedPerPatch;
+            fieldsChangedPerDef = FieldsChangedPerDef;
+            patchNotesStored = PatchNotesStored;
+            debugShowPatchGeneration = false;
+        }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref ticksBetweenPatchNotes, "ticksBetweenPatchNotes", 25000);
-            Scribe_Values.Look(ref fieldsChangedPerPatch, "fieldsChangedPerPatch", 1);
-            Scribe_Values.Look(ref defsChangedPerPatch, "defsChangedPerPatch", 5);
+            Scribe_Values.Look(ref ticksBetweenPatchNotes, "ticksBetweenPatchNotes", TicksBetweenPatchNotes);
+
+            Scribe_Values.Look(ref defsChangedPerPatch, "defsChangedPerPatch", DefsChangedPerPatch);
+            Scribe_Values.Look(ref fieldsChangedPerDef, "fieldsChangedPerPatch", FieldsChangedPerDef);
+            Scribe_Values.Look(ref patchNotesStored, "patchNotesStored", PatchNotesStored);
+
+            Scribe_Deep.Look(ref latestVersion, "latestVersion");
 
             Scribe_Values.Look(ref debugShowPatchGeneration, "debugShowPatchGeneration", false);
         }
@@ -37,6 +58,7 @@ namespace TynanTyrannical
         public TTMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<TTModSettings>();
+            ParseHelper.Parsers<PatchVersion>.Register(new Func<string, PatchVersion>(PatchVersion.FromString));
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
@@ -45,11 +67,25 @@ namespace TynanTyrannical
 
             Rect rect = new Rect(inRect)
             {
-                width = inRect.width / 4
+                width = inRect.width / 3
             };
             lister.Begin(rect);
 
-            if (lister.ButtonText("ShowAllPatchNotes".Translate(), "ShowAllPatchNotesTooltip".Translate()))
+            lister.IntegerBox("TicksBetweenPatchNotes".Translate(), "TicksBetweenPatchNotesTooltip".Translate(), ref settings.ticksBetweenPatchNotes, 200, 0, 1);
+            lister.Gap(2);
+
+            lister.SliderLabeled("DefsChangedPerPatch".Translate(), "DefsChangedPerPatchTooltip".Translate(), string.Empty, ref settings.defsChangedPerPatch, 1, 10);
+            lister.SliderLabeled("FieldsChangedPerDef".Translate(), "FieldsChangedPerDefTooltip".Translate(), string.Empty, ref settings.fieldsChangedPerDef, 1, 10);
+
+            lister.SliderLabeled("PatchNotesStored".Translate(), "PatchNotesStoredTooltip".Translate(), string.Empty, ref settings.patchNotesStored, 1, 20);
+
+            lister.GapLine(8);
+
+            if (lister.ButtonText("ResetPatchNotesToDefault".Translate()))
+            {
+                settings.ResetToDefault();
+            }
+            if (lister.ButtonText("ShowAllPatchNotes".Translate()))
             {
                 PatchWindow.OpenWindow();
             }

@@ -47,6 +47,7 @@ namespace TynanTyrannical
             foreach (PatchInfo patchNote in GameComponent_PatchNotes.Instance.patchNotes)
             {
                 Text.Font = GameFont.Medium;
+                lister.Label($"<b>{patchNote.title}</b>");
                 lister.Label(patchNote.dateOfPatch);
                 Text.Font = GameFont.Small;
                 lister.Label(patchNote.text);

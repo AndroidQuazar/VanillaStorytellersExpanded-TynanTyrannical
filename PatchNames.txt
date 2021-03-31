@@ -1,0 +1,1331 @@
+Pack
+Group
+Horde
+Gaggle
+Multitude
+Muffalo
+Boomrat
+Megascarab
+Cobra
+Deer
+Boar
+Squirrel
+Iguana
+Aardvark
+Alligator
+Alpaca
+Ant
+Anteater
+Antelope
+Ape
+Armadillo
+Donkey
+Baboon
+Badger
+Barracuda
+Bat
+Bear
+Beaver
+Bee
+Bison
+Buffalo
+Camel
+Caribou
+Cat
+Caterpillar
+Cheetah
+Chicken
+Chimpanzee
+Chinchilla
+Clam
+Cockroach
+Cod
+Condor
+Coyote
+Crab
+Crane
+Crocodile
+Crow
+Dinosaur
+Dog
+Dolphin
+Donkey
+Dove
+Eagle
+Echidna
+Eel
+Elephant
+Elk
+Emu
+Falcon
+Ferret
+Finch
+Flamingo
+Fox
+Frog
+Gazelle
+Gerbil
+Panda
+Giraffe
+Gnat
+Goat
+Goose
+Gorilla
+Goshawk
+Grasshopper
+Grouse
+Hamster
+Hare
+Hawk
+Hedgehog
+Heron
+Herring
+Hippopotamus
+Hornet
+Horse
+Human
+Hummingbird
+Hyena
+Ibis
+Jackal
+Jaguar
+Jay
+Bluejay
+Kangaroo
+Koala
+Komodo
+Lemur
+Leopard
+Lion
+Llama
+Lobster
+Locust
+Lyrebird
+Magpie
+Mallard
+Duck
+Manatee
+Mandrill
+Mantis
+Meerkat
+Mink
+Mole
+Mongoose
+Monkey
+Moose
+Mouse
+Mosquito
+Mule
+Narwhal
+Newt
+Octopus
+Okapi
+Opossum
+Ostrich
+Otter
+Owl
+Oyster
+Panther
+Parrot
+Partridge
+Pelican
+Penguin
+Pheasant
+Pig
+Pigeon
+Porcupine
+Porpoise
+Quail
+Rabbit
+Raccoon
+Ram
+Rat
+Raven
+Reindeer
+Rhino
+Salamander
+Salmon
+Sardine
+Scorpion
+Seahorse
+Seal
+Shark
+Shrew
+Skunk
+Snail
+Snake
+Sparrow
+Spider
+Squid
+Stingray
+Stinkbug
+Stork
+Swan
+Tapir
+Tarsier
+Termite
+Tiger
+Toad
+Trout
+Turkey
+Turtle
+Viper
+Vole
+Vulture
+Walrus
+Wasp
+Weasel
+Whale
+Wolverine
+Wombat
+Woodpecker
+Worm
+Yak
+Zebra
+Alligator
+Ape
+Armadillo
+Barracuda
+Beaver
+Bat
+Bear
+Buffalo
+Camel
+Cheetah
+Cobra
+Cockroach
+Coyote
+Crab
+Crocodile
+Crow
+Dinosaur
+Raptor
+Dog
+Donkey
+Dragonfly
+Dragon
+Eagle
+Falcon
+Fox
+Frog
+Gorilla
+Grasshopper
+Hawk
+Hornet
+Hyena
+Jackal
+Jaguar
+Kangaroo
+Komodo
+Leopard
+Lion
+Lobster
+Locust
+Mantis
+Mole
+Monkey
+Mosquito
+Owl
+Panther
+Pig
+Porcupine
+Raccoon
+Rat
+Raven
+Rhino
+Salamander
+Scorpion
+Shark
+Skunk
+Snake
+Spider
+Squid
+Termite
+Tiger
+Toad
+Trout
+Turtle
+Viper
+Vulture
+Wasp
+Weasel
+Whale
+Wolf
+Wolverine
+Worm
+Shirt
+Button-down Shirt
+Formal Shirt
+Jacket
+Raincoat
+Formal Suit
+Evening Gown
+Parka
+Duster
+Space Suit
+Power Armor Suit
+Bow Tie
+Necktie
+Belt
+Jock Strap
+Hat
+Bowler Hat
+Baseball Cap
+Tuque
+Top Hat
+Shoe
+Boot
+Sandal
+Artwork
+Art
+Work
+Item
+Piece
+Oeuvre
+Expression
+Attempt
+Untitled
+Titled
+Shape
+Form
+Image
+Shot
+Picture
+Portrait
+Still
+Poem
+Lullaby
+Song
+Tune
+Rhythm
+Beat
+Codex
+Book
+Cuboid
+Circloid
+Parabolic
+Cubic
+Curvelike
+Curve
+Mirror
+Day
+Vomit
+Sweat
+Shadow
+Freedom
+Vision
+Love
+Divinity
+Wisdom
+Shame
+Death
+Darkness
+Head
+Eye
+Nose
+Mouth
+Tooth
+Fang
+Cheek
+Chin
+Lip
+Ear
+Neck
+Body
+Chest
+Shoulder
+Arm
+Elbow
+Wrist
+Hand
+Palm
+Finger
+Claw
+Talon
+Wing
+Hip
+Leg
+Knee
+Ankle
+Foot
+Heel
+Toe
+Paw
+Company
+Partners
+Corporation
+Traders
+Industries
+Incorporated
+Travelers
+Interplanetary
+Shipping
+Export Company
+Import Company
+Transport Company
+Transit Company
+Securities
+Solutions
+Consortium
+Interstellar
+Lubricants
+Red
+Blue
+Green
+Purple
+Black
+White
+Gray
+Orange
+Red
+Black
+Gray
+Ash
+Dark
+Shadow
+Night
+Village
+Village
+Town
+Town
+Township
+Hamlet
+District
+City
+Settlement
+Encampment
+Campsite
+Sadness
+Despair
+Loss
+Depression
+Emptiness
+Solitude
+Distance
+Thought
+Contemplation
+Loneliness
+Isolation
+Seclusion
+Silence
+Confinement
+Detachment
+Lonesomeness
+Quietude
+Decay
+Desolation
+Destruction
+Devastation
+Exhaustion
+Defeat
+Failure
+Cataclysm
+Death
+Poverty
+Desire
+Need
+Debt
+Hardship
+Helplessness
+Scarcity
+Starvation
+Thirst
+Hunger
+Difficulty
+Challenge
+Pain
+Suffering
+Victory
+Murder
+Death
+Thrusting
+Power
+Force
+Godlessness
+God
+Pain
+Triumph
+Blood
+Cash
+Vengeance
+Revenge
+Agony
+Fever
+Illness
+Injury
+Torment
+Anguish
+Misery
+Persecution
+Torture
+Suffering
+Tyranny
+Oppression
+Cruelty
+Terrorism
+Terror
+Chaos
+Trouble
+Unrest
+Anarchy
+Combat
+Violence
+War
+Bloodshed
+Hostility
+Strife
+Struggle
+Hope
+Love
+Strength
+Struggle
+Family
+Loyalty
+Fun
+Bliss
+Plenty
+Growth
+Happiness
+Togetherness
+Community
+Affection
+Intimacy
+Fellowship
+Friendship
+Goodwill
+Devotion
+Harmony
+Solidarity
+Compassion
+Mercy
+Patience
+Sympathy
+Honesty
+Kindness
+Grace
+Decency
+Elegance
+Camraderie
+Brotherhood
+Safety
+Bandit
+Criminal
+Raider
+Outlaw
+Pirate
+Robber
+Brigand
+Crook
+Rogue
+Burglar
+Mugger
+Terrorist
+Barbarian
+Cannibal
+Devil
+Demon
+Beast
+Monster
+Vampire
+Fiend
+Goblin
+Imp
+Dragon
+Poker
+Chess
+Cards
+Backgammon
+Dice
+Craps
+Roulette
+Blackjack
+Blood
+Gore
+Guts
+Viscera
+Innards
+Entrails
+Intestines
+Society
+Crew
+Group
+Company
+Team
+Pack
+Army
+Party
+Band
+Rig
+Organization
+Lineup
+Unit
+Faction
+Gang
+Outfit
+Partners
+Scyther
+Lancer
+Centipede
+Mechanoid
+Robot
+Automaton
+Drone
+Combat Drone
+Serving Bot
+Utility Bot
+Sexbot
+Guard Bot
+Machine Persona Avatar
+Archotech Projection
+Rock
+Stone
+Boulder
+Tree
+Shrub
+Bush
+Pond
+Pool
+Lake
+Hill
+Cave
+Stump
+Shell
+Feather
+Seed
+Trunk
+Fruit
+Needle
+Beetle
+Bug
+Hoof
+Claw
+Tail
+Hide
+Skin
+Horn
+Tooth
+Wing
+Wood
+Friend
+Supporter
+Partner
+Buddy
+Companion
+Cohort
+Comrade
+Sidekick
+Defender
+Assistant
+Follower
+Killer
+Murderer
+Butcher
+Hunter
+Slayer
+Exterminator
+Deadbeat
+Convict
+Criminal
+Crook
+Lawbreaker
+Offender
+Thug
+Gangster
+Soldier
+Assassin
+Banger
+Deplorable
+Outlaw
+Jailbird
+Desperado
+Deuce
+Hustler
+Malefactor
+Sinner
+Transgressor
+Trespasser
+Betrayer
+Pirate
+Shanker
+Slicer
+Cutter
+Splitter
+Facebeater
+Stabber
+Sniper
+Crusher
+Slicer
+Shooter
+Merchant
+Owner
+Reaper
+Executioner
+Cannibal
+Violator
+Defiler
+Despoiler
+Attacker
+Ravager
+Champion
+Victor
+Winner
+Dominator
+Conqueror
+Vanquisher
+Samurai
+Hero
+Mother
+Son
+Father
+Brother
+Uncle
+Nephew
+Aunt
+Farmer
+Villager
+Miller
+Smith
+Brewer
+Weaver
+Cook
+Beggar
+Town Guard
+Town Councilor
+Baker
+Tailor
+Elder
+Gunsmith
+Blacksmith
+Fletcher
+Thresher
+Thatcher
+Carpenter
+Trader
+Surgeon
+Doctor
+Explorer
+Adventurer
+Drunkard
+Priest
+Cleric
+Smuggler
+Comedian
+Teacher
+Acrobat
+Clown
+Actor
+Artist
+Boxer
+Chemist
+Dancer
+Fortune Teller
+Gardener
+Maid
+Hypnotist
+Jeweler
+Poet
+Cowboy
+Singer
+Philosopher
+Gunslinger
+Sheriff
+Archaeologist
+Hacker
+Planetologist
+Politician
+Historian
+Writer
+Engineer
+Dentist
+Lawyer
+Chief
+Warrior
+Archer
+Witch Doctor
+Shaman
+Clothes
+Clothing Choices
+Fashion Knowledge
+Stylishness
+
+Looks
+Appearance
+Height
+Weight
+Hair
+Hairstyle
+Facial Hair
+Leg Hair
+Face
+Eyes
+Nose
+Ears
+Jawline
+Forehead
+Hands
+Body
+Muscles
+Voice
+Way Of Speaking
+Accent
+Shooting Skills
+Melee Fighting Skills
+Social Skills
+Plant Growing Skills
+Medical Skill
+Animal Taming Ability
+Cooking Skill
+Construction Skill
+Mining Skill
+Artistic Skills
+Crafting Skills
+Intellectual Skills
+Skills
+Abilities
+Intelligence
+Judgment
+Brainpower
+Emotional Stability
+Self-control
+Usefulness
+Attitude
+Way Of Walking
+Way Of Thinking
+Fighting Methods
+Learning Ability
+Diet
+Eating Habits
+Food Preferences
+Relationship Status
+Age
+Value As A Human
+Sense Of Responsibility
+Sense Of Duty
+Honor
+Honesty
+Courageousness
+Opinions
+Beliefs
+Ideas
+Hopes And Dreams
+Ambitions
+Personal Habits
+Personal Hygiene
+Hardiness
+Personality
+Class
+Culture
+Recreational Preferences
+Punctuality
+Generosity
+Bravery
+Loyalty
+Honesty
+Kindness
+Eloquence
+Broad-mindedness
+Charm
+Sincerity
+Open-mindedness
+Origins
+Parents
+Grandparents
+Friends
+Family
+Family Background
+Lovers
+Federation
+League
+Compact
+Accord
+Concord
+Amalgamation
+Unification
+Union
+Nation
+Confederacy
+Confederation
+Alliance
+Kin League
+Covenant
+Treaty
+Pact
+Coalition
+Kinship
+People
+Tribe
+Union
+Nation
+Confederacy
+Confederation
+Alliance
+Kin League
+Covenant
+Treaty
+Pact
+Coalition
+Story
+Tale
+Adventure
+Drama
+Fable
+Tale
+Chronicle
+Parable
+Saga
+Exploit
+Feat
+Enterprise
+Incident
+Occurrence
+Undertaking
+Venture
+Plan
+Action
+Struggle
+Attempt
+Effort
+Encounter
+Endeavor
+Scramble
+Striving
+Toil
+Goal
+Quest
+Event
+Happening
+Story
+Tale
+Yarn
+Journey
+Version
+Approach
+Adventure
+Anecdote
+Article
+Autobiography
+Biography
+Book
+Comedy
+Description
+Drama
+Fable
+Fantasy
+Feature
+Fiction
+History
+Information
+Legend
+Memoir
+Myth
+Narrative
+Novel
+Record
+Report
+Tale
+Tragedy
+Version
+Allegory
+Apologue
+Beat
+Chronicle
+Cliffhanger
+Epic
+Folktale
+Gag
+Narration
+Parable
+Potboiler
+Recital
+Relation
+Romance
+Saga
+Scoop
+Sequel
+Serial
+Spiel
+Yarn
+Fairy Tale
+Old Saw
+Exploit
+Experience
+Feat
+Scene
+Trip
+Chance
+Contingency
+Endangerment
+Enterprise
+Happening
+Hazard
+Incident
+Jeopardy
+Occurrence
+Peril
+Speculation
+Undertaking
+Venture
+Plan
+Truth
+Action
+Background
+Contact
+Involvement
+Practice
+Reality
+Struggle
+Wisdom
+Attempt
+Battle
+Clash
+Combat
+Conflict
+Contest
+Effort
+Encounter
+Endeavor
+Skirmish
+Strife
+Trial
+Work
+Essay
+Grind
+Hassle
+Jam
+Jump
+Labor
+Pains
+Row
+Scramble
+Striving
+Toil
+Undertaking
+Childhood
+Childhood Fears
+Childhood Loves
+Childhood Experiences
+Life
+Life Challenges
+Life's Rewards
+Life Memories
+Life Goals
+Life Regrets
+Life Stresses
+The Disappointment Of Life
+The Pointlessness Of Life
+The Randomness Of Life
+Hope
+Maturity
+Adulthood
+Children
+Fear
+Nightmares
+Success
+The Morality Of Poverty
+The Morality Of Wealth
+Death
+Death's Inevitability
+Death's Release
+Life After Death
+Dead Loved Ones
+Absent Friends
+Charity
+Philanthropism
+Aiding The Downtrodden
+Helping The Sick
+Helping The Poor
+Aliens
+Alien Contact
+Alien Conspiracies
+The Absence Of Aliens
+Government Conspiracies
+Religious Conspiracies
+The Stars
+Other Planets
+This Planet
+The Scale Of The Universe
+The Age Of The Universe
+The Fate Of The Universe
+Man's Spread Through The Universe
+Primitivism
+Luddism
+Technology
+Machine Intelligence
+Artificial Intelligence
+Computer Technology
+Weapons Technology
+Society
+Morality
+Freedom
+Law
+Government
+Rights
+History
+Terror
+Terrorism
+Politics
+Honor
+Social Issues
+The Market
+Freedom
+Authoritarianism
+Anarchy
+Injustice
+Justice
+Truth
+Tribalism
+Ingroup Preference
+Philosophy
+Reality
+Culture
+Culture Differences
+Culture Shock
+Human Nature
+Humanity
+Religion
+The Meaning Of Life
+Identity
+Eternity
+Monism
+Dualism
+Epistemology
+Honesty
+Freedom Of Speech
+Ethnicity
+Liberalism
+The Inevitability Of Suffering
+The Nature Of Knowledge
+The Nature Of Emotion
+Fate
+The Fate Of Mankind
+The Fate Of The Universe
+Art
+Art Movements
+Artistic Ambition
+Human Aesthetics
+Artistic Instincts
+Art History
+Love
+Romance
+Sexuality
+Sexual Morality
+Masculinity
+Femininity
+Self-replicating Machines
+Generation Ships
+Von Neumann Probes
+Archotechnology
+Archotechs
+Machine Personas
+The Johnson-Tanaka Drive
+The Ordo Historia
+Old Earth
+Rimworlds
+Coreworlds
+Cryptosleep
+Cryptosleep Tombs
+Mechanoids
+Cannibalism
+The Weather
+Breakfast Cereal
+Breakfast
+Dinner
+Food
+Lunchtime
+Eating Habits
+Salty Foods
+Sweet Foods
+Savory Foods
+Bitter Foods
+Favorite Haircuts
+Favorite Clothes
+Hairstyles
+Fashion
+Makeup
+Beards
+Facial Hair
+Odd Jobs
+Kids' Games
+Entertainment
+Games
+Birthdays
+Balloons
+Drunkenness
+Getting Drunk
+Parties
+Vacations
+Beautiful People
+Fat People
+Tall People
+Short People
+Guilty Pleasures
+Vomiting
+Eating
+Swimming
+Sports
+Beaches
+Animals
+Cute Animals
+Fat Animals
+Pets
+Pet Peeves
+Life's Annoyances
+Laundry
+Sweating
+Hauling
+Cleaning
+Eating Without Tables
+Comfortable Furniture
+Fine Meals
+Lavish Meals
+Pemmican
+Horseshoes
+Recreation
+Lovers
+Lovin'
+Healroot
+Botched Surgeries
+Vomiting
+Board Games
+Computer Games
+Television
+Poker
+Billiards
+Spaceships
+Xenohumans
+Plain
+Expanse
+Grassland
+Plateau
+Prairie
+Desert
+Field
+Forest
+Cactus
+Tree
+Bush
+Thicket
+Bramble
+Boulder
+Rock
+Quarry
+Stone
+Mountain
+Hill
+Mesa
+Cliff
+Bluff
+Crag
+Ridge
+Valley
+Canyon
+Gorge
+Oasis
+Meadow
+Cave
+River
+Stream
+Creek
+Tributary
+Brook
+Delta
+Inlet
+Sound
+Cove
+Lake
+Ocean
+Pond
+Basin
+Lagoon
+Pit
+Swamp
+Tarpit
+Mire
+Oak
+Poplar
+Pine
+Teak
+Cecropia
+Palm
+Bamboo
+Ash
+Aspen
+Beech
+Birch
+Cherry
+Chestnut
+Cottonwood
+Elm
+Fir
+Hemlock
+Hickory
+Larch
+Maple
+Cedar
+Spruce
+Walnut
+Willow
+Carrot
+Onion
+Turnip
+Gourd
+Pumpkin
+Cauliflower
+Bell Pepper
+Pepper
+Mushroom
+Pea
+Artichoke
+Eggplant
+Lentil
+Cabbage
+Beet
+Corn Cob
+Yam
+Zucchini
+Dagger
+Blade
+Shiv
+Razor
+Scythe
+Sickle
+Sword
+Sabre
+Rapier
+Claymore
+Scimitar
+Spear
+Pike
+Ikwa
+Lance
+Bayonet
+Javelin
+Axe
+Tomahawk
+Hatchet
+Whip
+Saw
+Club
+Hammer
+Sledgehammer
+Mace
+Knuckleduster
+Gauntlet
+Dart
+Arrow
+Crossbow
+Bow
+Gun
+Pistol
+Rifle
+Shotgun
+Revolver
+Cannon
+Mortar
+Howitzer
+Bomb
+Nuke
+Landmine
+Grenade
+Missile
+Rocket

@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using Verse;
-using RimWorld;
 using UnityEngine;
 
 namespace TynanTyrannical
@@ -10,9 +10,33 @@ namespace TynanTyrannical
     [StaticConstructorOnStartup]
     public static class Utility
     {
+        public const string PatchNamesFile = "PatchNames.txt";
+        public static readonly ModContentPack mod;
+
         static Utility()
         {
             Log.Message($"<color=orange>[TynanTyrannical]</color> version 1.0.0");
+            mod = LoadedModManager.RunningMods.FirstOrDefault((ModContentPack mod) => mod.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly()));
+            ImportNames();
+        }
+
+        private static void ImportNames()
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines(Path.Combine(mod.RootDir, PatchNamesFile));
+                if (lines.NullOrEmpty())
+                {
+                    throw new IOException("Empty file");
+                }
+                PatchNotes.patchNoteNames.AddRange(lines);
+                PatchNotes.NamePatchNotes = true;
+            }
+            catch (IOException ex)
+            {
+                Log.Error($"Exception thrown while attempting to import names for patches. Disabling naming feature. Exception=\"{ex.Message}\"");
+                PatchNotes.NamePatchNotes = false;
+            }
         }
 
         public static bool IsNumericType(this Type o)

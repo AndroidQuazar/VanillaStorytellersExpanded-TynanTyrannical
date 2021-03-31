@@ -10,7 +10,8 @@
 				<limits>1~9999</limits>
 				<ignoreIfValue>1</ignoreIfValue>
 				<weightToPatch>0.05</weightToPatch>
-				<formatting>WholeNumberRounded</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>statBases</name>
@@ -46,5 +47,11 @@
 				<name>skyfaller</name>
 			</li>
 		</fields>
+	</TynanTyrannical.PatchTypeDef>
+	
+	<!-- Included for transparency, only default values are checked and registered as patchable -->
+	<TynanTyrannical.PatchTypeDef>
+		<defName>StatPatchDef</defName>
+		<type>TynanTyrannical.StatPatchDef</type>
 	</TynanTyrannical.PatchTypeDef>
 </Defs>

@@ -19,7 +19,13 @@ namespace TynanTyrannical
         private static readonly Dictionary<Type, FieldTypeDef> nestedTypes = new Dictionary<Type, FieldTypeDef>();
 
         private static readonly List<Pair<object, PatchRange>> patchableFields = new List<Pair<object, PatchRange>>();
+
         private static readonly List<string> defsAffected = new List<string>();
+        private static readonly List<string> fieldsAffected = new List<string>();
+
+        public static List<string> patchNoteNames = new List<string>();
+
+        internal static bool NamePatchNotes { get; set; }
 
         static PatchNotes()
         {
@@ -37,6 +43,7 @@ namespace TynanTyrannical
         public static void ReceivePatchNotes()
         {
             StringBuilder stringBuilder = new StringBuilder();
+
             defsAffected.Clear();
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
             {
@@ -65,7 +72,7 @@ namespace TynanTyrannical
                 }
                 if (TTMod.settings.debugShowPatchGeneration)
                 {
-                    Log.Message($"Patching: {defToChange.Key.defName} FieldsToChange: {defToChange.Value.Count} DefsChangedPerPatch={TTMod.settings.defsChangedPerPatch} FieldsChangedPerPatch={TTMod.settings.fieldsChangedPerPatch}");
+                    Log.Message($"Patching: {defToChange.Key.defName} FieldsToChange: {defToChange.Value.Count}");
                 }
                 PatchFields(defToChange, stringBuilder);
             }
@@ -86,7 +93,7 @@ namespace TynanTyrannical
                 }
                 if (TTMod.settings.debugShowPatchGeneration)
                 {
-                    Log.Message($"Patching: {defToChange.Key.defName} FieldsToChange: {defToChange.Value.Count} DefsChangedPerPatch={TTMod.settings.defsChangedPerPatch} FieldsChangedPerPatch={TTMod.settings.fieldsChangedPerPatch}");
+                    Log.Message($"Patching: {defToChange.Key.defName} FieldsToChange: {defToChange.Value.Count}");
                 }
                 PatchFields(defToChange, stringBuilder);
             }
@@ -97,11 +104,17 @@ namespace TynanTyrannical
         {
             defsAffected.Add(defPair.Key.defName);
             stringBuilder.AppendLine($"<color=green>{defPair.Key.defName}</color>");
-            for (int j = 0; j < Mathf.Min(TTMod.settings.fieldsChangedPerPatch, defPair.Value.Count); j++)
+            fieldsAffected.Clear();
+            for (int j = 0; j < Mathf.Min(TTMod.settings.fieldsChangedPerDef, defPair.Value.Count); j++)
             {
-                var objectPair = defPair.Value.RandomElement();
+                var objectPair = defPair.Value.Where(p => !fieldsAffected.Contains(p.Second.name)).RandomElementWithFallback();
+                if (objectPair == default)
+                {
+                    break;
+                }
                 object parent = objectPair.First;
                 PatchRange patch = objectPair.Second;
+                fieldsAffected.Add(patch.name);
                 object oldValue = patch.FieldInfo.GetValue(parent);
                 float value = patch.NewRandomValue(defPair.Key);
                 if (patch.limits.HasValue)
@@ -109,8 +122,15 @@ namespace TynanTyrannical
                     value = value.Clamp(patch.limits.Value.min, patch.limits.Value.max);
                 }
                 object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
-                patch.FieldInfo.SetValue(parent, valueConverted);
-                stringBuilder.AppendLine(patch.PatchNoteText(oldValue, valueConverted));
+                if (!valueConverted.Equals(oldValue))
+                {
+                    patch.FieldInfo.SetValue(parent, valueConverted);
+                    stringBuilder.AppendLine(patch.PatchNoteChanged(oldValue, valueConverted));
+                }
+                else
+                {
+                    stringBuilder.AppendLine(patch.PatchNoteUnchanged(oldValue));
+                }
             }
         }
 
@@ -131,7 +151,11 @@ namespace TynanTyrannical
                 foreach (object defObj in objCollection)
                 {
                     patchableFields.Clear();
-                    if (defObj is Def def && !def.generated)
+                    if (defObj is StatPatchDef statPatchDef && statPatchDef.patch.applyToDef)
+                    {
+                        BuildDefList(statPatchDef, statPatchDef.StatDef, new List<PatchRange>() { statPatchDef.patch });
+                    }
+                    else if (defObj is Def def && !def.generated)
                     {
                         BuildDefList(def, def, patchDef.fields);
                     }
@@ -148,7 +172,7 @@ namespace TynanTyrannical
         {
             try
             {
-                foreach (PatchRange patch in fields)
+                foreach (PatchRange patch in fields.Where(p => p.DefIsPatchable(def)))
                 {
                     if (patch.FieldInfo.FieldType.IsNumericType())
                     {
@@ -179,11 +203,9 @@ namespace TynanTyrannical
                                 {
                                     if (statPatchDef.StatDef.defName == stat.stat.defName)
                                     {
-                                        Log.Message($"Assigned: {statPatchDef.StatDef.defName}");
                                         BuildDefList(def, stat, new List<PatchRange>() { statPatchDef.patch });
                                     }
                                 }
-                                
                             }
                         }
                     }

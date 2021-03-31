@@ -16,7 +16,7 @@
 				<name>wearPerDay</name>
 				<range>0~3</range>
 				<limits>0~99999</limits>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -30,7 +30,7 @@
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>mineableDropChance</name>
@@ -38,7 +38,7 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>1</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>mineableScatterCommonality</name>
@@ -46,28 +46,28 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>mineableYield</name>
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>1</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>minMechClusterPoints</name>
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>nutritionCostPerDispense</name>
 				<range>0~2</range>
 				<limits>0~10</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>roofCollapseDamageMultiplier</name>
@@ -75,28 +75,28 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>1</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>turretBurstCooldownTime</name>
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>-1</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>turretBurstWarmupTime</name>
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>turretInitialCooldownTime</name>
 				<range>0~3</range>
 				<limits>1~999999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>unpoweredWorkTableWorkSpeedFactor</name>
@@ -104,7 +104,7 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -113,11 +113,12 @@
 		<defName>IngestibleProperties</defName>
 		<type>IngestibleProperties</type>
 		<fields>
-			<li>
+			<li Class="TynanTyrannical.PatchRangeIngestible">
 				<name>joy</name>
-				<range>0~3</range>
-				<limits>-0.15~0.15</limits>
-				<formatting>Decimal</formatting>
+				<range>0~0.35</range>
+				<limits>0~0.35</limits>
+				<multiplier>false</multiplier>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -130,7 +131,7 @@
 				<name>cleaningWorkToReduceThickness</name>
 				<range>0~3</range>
 				<limits>1~9999</limits>
-				<formatting>WholeNumber</formatting>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -144,7 +145,7 @@
 				<range>0~1</range>
 				<limits>0~1</limits>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -157,7 +158,8 @@
 				<name>flightSpeed</name>
 				<range>0~3</range>
 				<limits>1~9999</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -171,39 +173,43 @@
 				<range>0~1</range>
 				<limits>0~1</limits>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>fertilitySensitivity</name>
 				<range>0~1.4</range>
 				<limits>0~1.4</limits>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>growDays</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>harvestYield</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>sowMinSkill</name>
 				<range>0~3</range>
 				<limits>0~20</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>sowWork</name>
 				<range>0~3</range>
 				<limits>1~9999</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -217,14 +223,15 @@
 				<range>0~3</range>
 				<limits>0~99999</limits>
 				<ignoreIfValue>-1</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>damageAmountBase</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
 				<ignoreIfValue>-1</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>explosionChanceToStartFire</name>
@@ -232,33 +239,35 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>explosionDelay</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>explosionRadius</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
 				<ignoreIfValue>0</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>speed</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>stoppingPower</name>
 				<range>0~3</range>
 				<limits>0~99999</limits>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -272,27 +281,29 @@
 				<range>0~3</range>
 				<limits>0.1~99999</limits>
 				<ignoreIfValue>1</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>baseHungerRate</name>
 				<range>0~3</range>
 				<limits>0.1~99999</limits>
 				<ignoreIfValue>1</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>gestationPeriodDays</name>
 				<range>0~3</range>
 				<limits>0~99999</limits>
 				<ignoreIfValue>10</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>lifeExpectancy</name>
 				<range>0~5</range>
 				<limits>20~9999</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>manhunterOnDamageChance</name>
@@ -300,7 +311,7 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>manhunterOnTameFailChance</name>
@@ -308,14 +319,14 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>maxPreyBodySize</name>
 				<range>0~3</range>
 				<limits>0.1~99999</limits>
 				<ignoreIfValue>99999</ignoreIfValue>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>petness</name>
@@ -323,21 +334,22 @@
 				<limits>0~1</limits>
 				<ignoreIfValue>0</ignoreIfValue>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 			<li>
 				<name>nuzzleMtbHours</name>
 				<range>0~3</range>
 				<limits>1~99999</limits>
 				<ignoreIfValue>-1</ignoreIfValue>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>wildness</name>
 				<range>0~1</range>
 				<limits>0~1</limits>
 				<multiplier>false</multiplier>
-				<formatting>Percentage</formatting>
+				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>
@@ -350,19 +362,20 @@
 				<name>explosionDamageFactor</name>
 				<range>0~3</range>
 				<limits>0~99999</limits>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 			<li>
 				<name>explosionRadius</name>
 				<range>0~3</range>
 				<limits>0~99999</limits>
-				<formatting>WholeNumber</formatting>
+				<roundTo>1</roundTo>
+				<toStringStyle>Integer</toStringStyle>
 			</li>
 			<li>
 				<name>speed</name>
 				<range>0~3</range>
 				<limits>0.1~99999</limits>
-				<formatting>Decimal</formatting>
+				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
 	</TynanTyrannical.FieldTypeDef>

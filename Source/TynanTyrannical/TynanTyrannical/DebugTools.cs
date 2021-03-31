@@ -18,18 +18,22 @@ namespace TynanTyrannical
         private static void TestPatchNotesChoice()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
-	        foreach (PatchTypeDef patchTypeDef in DefDatabase<PatchTypeDef>.AllDefs)
+	        foreach (PatchTypeDef patchTypeDef in DefDatabase<PatchTypeDef>.AllDefs.Where(p => !p.fields.NullOrEmpty()))
 	        {
 		        list.Add(new DebugMenuOption(patchTypeDef.defName, DebugMenuOptionMode.Action, delegate()
 		        {
                     List<DebugMenuOption> list2 = new List<DebugMenuOption>();
                     foreach (PatchRange patchRange in patchTypeDef.fields.Where(p => !p.FieldInfo.FieldType.IsNumericType()))
                     {
-                        list2.Add(new DebugMenuOption(patchRange.name, DebugMenuOptionMode.Action, delegate ()
+                        FieldTypeDef fieldTypeDef = DefDatabase<FieldTypeDef>.AllDefsListForReading.FirstOrDefault(f => f.type == patchRange.FieldInfo.FieldType);
+                        if (fieldTypeDef != null)
                         {
-                            FieldTypeDef fieldTypeDef = DefDatabase<FieldTypeDef>.AllDefsListForReading.FirstOrDefault(f => f.type == patchRange.FieldInfo.FieldType);
-                            PatchNotes.ForceSpecificPatchNotes(fieldTypeDef);
-                        }));
+                            list2.Add(new DebugMenuOption(patchRange.name, DebugMenuOptionMode.Action, delegate ()
+                            {
+                            
+                                PatchNotes.ForceSpecificPatchNotes(fieldTypeDef);
+                            }));
+                        }
                     }
                     Find.WindowStack.Add(new Dialog_DebugOptionListLister(list2));
 		        }));
@@ -39,7 +43,7 @@ namespace TynanTyrannical
                 List<DebugMenuOption> list2 = new List<DebugMenuOption>();
                 foreach (StatPatchDef statPatchDef in DefDatabase<StatPatchDef>.AllDefs)
                 {
-                    list2.Add(new DebugMenuOption(statPatchDef.defName, DebugMenuOptionMode.Action, delegate ()
+                    list2.Add(new DebugMenuOption(statPatchDef.patch.label, DebugMenuOptionMode.Action, delegate ()
                     {
                         PatchNotes.ForceSpecificPatchNotes(statPatchDef);
                     }));
