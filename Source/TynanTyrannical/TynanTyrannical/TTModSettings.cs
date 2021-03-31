@@ -22,9 +22,6 @@ namespace TynanTyrannical
 
         public bool debugShowPatchGeneration = false;
 
-        /* Do Not Modify */
-        public PatchVersion latestVersion;
-
         public void ResetToDefault()
         {
             ticksBetweenPatchNotes = TicksBetweenPatchNotes;
@@ -42,8 +39,6 @@ namespace TynanTyrannical
             Scribe_Values.Look(ref defsChangedPerPatch, "defsChangedPerPatch", DefsChangedPerPatch);
             Scribe_Values.Look(ref fieldsChangedPerDef, "fieldsChangedPerPatch", FieldsChangedPerDef);
             Scribe_Values.Look(ref patchNotesStored, "patchNotesStored", PatchNotesStored);
-
-            Scribe_Deep.Look(ref latestVersion, "latestVersion");
 
             Scribe_Values.Look(ref debugShowPatchGeneration, "debugShowPatchGeneration", false);
         }

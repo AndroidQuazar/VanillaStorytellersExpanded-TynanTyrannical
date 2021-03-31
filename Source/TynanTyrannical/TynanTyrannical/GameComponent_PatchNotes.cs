@@ -18,6 +18,9 @@ namespace TynanTyrannical
 
         private bool storytellerLoaded = false;
 
+        /* Do Not Modify */
+        public PatchVersion latestVersion;
+
         public static GameComponent_PatchNotes Instance { get; private set; }
 
         public GameComponent_PatchNotes(Game game)
@@ -148,6 +151,7 @@ namespace TynanTyrannical
             Scribe_Values.Look(ref timeTillNextPatchNotes, "timeTillNextPatchNotes");
             Scribe_Collections.Look(ref currentDefValues, "currentDefValues", LookMode.Deep, LookMode.Value);
             Scribe_Collections.Look(ref patchNotes, "patchNotes", LookMode.Deep);
+            Scribe_Values.Look(ref latestVersion, "latestVersion");
         }
     }
 }

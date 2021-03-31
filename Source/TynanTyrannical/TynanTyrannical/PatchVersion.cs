@@ -21,7 +21,7 @@ namespace TynanTyrannical
             this.patch = patch;
         }
 
-        private static int NewPatchVersion => Rand.RangeInclusive(TTMod.settings.latestVersion.patch, TTMod.settings.latestVersion.patch + MaxPatchRevision);
+        private static int NewPatchVersion => Rand.RangeInclusive(GameComponent_PatchNotes.Instance.latestVersion.patch, GameComponent_PatchNotes.Instance.latestVersion.patch + MaxPatchRevision);
 
         public bool IsValid => major > 0 && major <= NextMajorVersion && minor >= 0 && minor <= NextMajorVersion && patch >= 0 && patch <= NextMinorVersion;
 
@@ -34,10 +34,10 @@ namespace TynanTyrannical
                 int major = 1;
                 int minor = 0;
                 int patch = NewPatchVersion;
-                if (TTMod.settings.latestVersion.IsValid)
+                if (GameComponent_PatchNotes.Instance.latestVersion.IsValid)
                 {
-                    major = TTMod.settings.latestVersion.major;
-                    minor = TTMod.settings.latestVersion.minor;
+                    major = GameComponent_PatchNotes.Instance.latestVersion.major;
+                    minor = GameComponent_PatchNotes.Instance.latestVersion.minor;
                     if (patch > NextMinorVersion)
                     {
                         minor += 1;
@@ -56,7 +56,7 @@ namespace TynanTyrannical
                 }
                     
                 PatchVersion nextVersion = new PatchVersion(major, minor, patch);
-                TTMod.settings.latestVersion = nextVersion;
+                GameComponent_PatchNotes.Instance.latestVersion = nextVersion;
                 return nextVersion;
             }
         }
