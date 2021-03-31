@@ -171,7 +171,6 @@ namespace TynanTyrannical
                     patchableFields.Clear();
                     if (defObj is StatPatchDef statPatchDef && statPatchDef.patch.ApplyToDef(statPatchDef.StatDef))
                     {
-                        Log.Message($"Can Apply: {statPatchDef.defName}");
                         BuildDefList(statPatchDef, statPatchDef.StatDef, new List<PatchRange>() { statPatchDef.patch });
                     }
                     else if (defObj is Def def && !def.generated)
