@@ -8,7 +8,7 @@
 </li>
 -->
 <Defs>
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>ApparelProperties</defName>
 		<type>ApparelProperties</type>
 		<fields>
@@ -19,9 +19,9 @@
 				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>BuildingProperties</defName>
 		<type>BuildingProperties</type>
 		<fields>
@@ -107,13 +107,13 @@
 				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>IngestibleProperties</defName>
 		<type>IngestibleProperties</type>
 		<fields>
-			<li Class="TynanTyrannical.PatchRangeIngestible">
+			<li Class="OskarObnoxious.PatchRangeIngestible">
 				<name>joy</name>
 				<range>0~0.35</range>
 				<limits>0~0.35</limits>
@@ -121,9 +121,9 @@
 				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>FilthProperties</defName>
 		<type>FilthProperties</type>
 		<fields>
@@ -134,9 +134,9 @@
 				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>GasProperties</defName>
 		<type>GasProperties</type>
 		<fields>
@@ -148,9 +148,9 @@
 				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>PawnFlyerProperties</defName>
 		<type>PawnFlyerProperties</type>
 		<fields>
@@ -162,9 +162,9 @@
 				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>PlantProperties</defName>
 		<type>PlantProperties</type>
 		<fields>
@@ -212,9 +212,9 @@
 				<toStringStyle>Integer</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>ProjectileProperties</defName>
 		<type>ProjectileProperties</type>
 		<fields>
@@ -270,9 +270,9 @@
 				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>RaceProperties</defName>
 		<type>RaceProperties</type>
 		<fields>
@@ -352,9 +352,9 @@
 				<toStringStyle>PercentZero</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>SkyfallerProperties</defName>
 		<type>SkyfallerProperties</type>
 		<fields>
@@ -378,9 +378,9 @@
 				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 	
-	<TynanTyrannical.FieldTypeDef>
+	<OskarObnoxious.FieldTypeDef>
 		<defName>VerbProperties</defName>
 		<type>VerbProperties</type>
 		<fields>
@@ -476,5 +476,5 @@
 				<toStringStyle>FloatTwo</toStringStyle>
 			</li>
 		</fields>
-	</TynanTyrannical.FieldTypeDef>
+	</OskarObnoxious.FieldTypeDef>
 </Defs>

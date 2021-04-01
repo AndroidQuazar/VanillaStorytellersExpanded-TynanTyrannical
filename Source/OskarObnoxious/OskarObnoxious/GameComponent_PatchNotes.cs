@@ -5,7 +5,7 @@ using System.Reflection;
 using Verse;
 using RimWorld;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class GameComponent_PatchNotes : GameComponent
     {
@@ -51,7 +51,7 @@ namespace TynanTyrannical
             {
                 currentDefValues = new Dictionary<DefPatchPair, float>();
             }
-            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_TynanTyrannical;
+            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_OskarObnoxious;
         }
 
         public override void GameComponentTick()

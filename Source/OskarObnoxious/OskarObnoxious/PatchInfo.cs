@@ -3,7 +3,7 @@ using RimWorld;
 using UnityEngine;
 
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchInfo : IExposable
     {

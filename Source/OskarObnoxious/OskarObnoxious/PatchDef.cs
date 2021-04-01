@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public abstract class PatchDef : Def
     {

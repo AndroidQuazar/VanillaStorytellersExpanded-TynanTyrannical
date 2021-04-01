@@ -8,7 +8,7 @@ using Verse;
 using RimWorld;
 using UnityEngine;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     [StaticConstructorOnStartup]
     public static class PatchNotes
@@ -61,7 +61,7 @@ namespace TynanTyrannical
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
             {
-                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                Messages.Message("Cannot initiate Patch Notes without Oskar Obnoxious as the active storyteller.", MessageTypeDefOf.RejectInput);
                 return;
             }
 
@@ -88,7 +88,7 @@ namespace TynanTyrannical
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
             {
-                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                Messages.Message("Cannot initiate Patch Notes without Oskar Obnoxious as the active storyteller.", MessageTypeDefOf.RejectInput);
                 return;
             }
 
@@ -182,7 +182,7 @@ namespace TynanTyrannical
             }
             catch (Exception ex)
             {
-                Log.Error($"[TynanTyrannical] Exception thrown while attempting to build PatchNotes. Exception=\"{ex.Message}\"");
+                Log.Error($"[OskarObnoxious] Exception thrown while attempting to build PatchNotes. Exception=\"{ex.Message}\"");
             }
         }
 
@@ -194,11 +194,18 @@ namespace TynanTyrannical
                 {
                     if (patch.FieldInfo.FieldType.IsNumericType())
                     {
-                        float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
-                        if (baseValue != patch.ignoreIfValue)
+                        try
                         {
-                            patch.originalValues.Add(def, baseValue);
-                            patchableFields.Add(new Pair<object, PatchRange>(parent, patch));
+                            float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
+                            if (baseValue != patch.ignoreIfValue)
+                            {
+                                patch.originalValues.Add(def, baseValue);
+                                patchableFields.Add(new Pair<object, PatchRange>(parent, patch));
+                            }
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Log.Error($"Exception thrown when registering {patch.DisplayName} for patching. Def=\"{def}\" Parent=\"{parent}\" Exception=\"{ex.Message}\"");
                         }
                     }
                     else if (nestedTypes.TryGetValue(patch.FieldInfo.FieldType, out FieldTypeDef fieldTypeDef))
@@ -241,7 +248,7 @@ namespace TynanTyrannical
                     }
                     else
                     {
-                        Log.Warning($"[TynanTyrannical] Unable to apply PatchNotes to {patch.name}. Field must be either a numeric type or registered as a nested type using FieldTypeDef. Type=\"{patch.FieldInfo.FieldType}\"");
+                        Log.Warning($"[OskarObnoxious] Unable to apply PatchNotes to {patch.name}. Field must be either a numeric type or registered as a nested type using FieldTypeDef. Type=\"{patch.FieldInfo.FieldType}\"");
                     }
                 }
                 if (!patchableFields.NullOrEmpty())
@@ -259,7 +266,7 @@ namespace TynanTyrannical
             }
             catch (Exception ex)
             {
-                Log.Error($"[TynanTyrannical] Exception thrown while building PatchNotes for Def {def?.defName ?? "Null"}. Exception=\"{ex.Message}\"");
+                Log.Error($"[OskarObnoxious] Exception thrown while building PatchNotes for Def {def?.defName ?? "Null"}. Exception=\"{ex.Message}\"");
             }
         }
         

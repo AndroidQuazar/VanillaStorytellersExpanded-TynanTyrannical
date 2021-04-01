@@ -1,47 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase" Name="StatPatchRangedAccuracyBase" Abstract="True">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase" Name="StatPatchRangedAccuracyBase" Abstract="True">
 		<patch>
 			<range>0~1</range>
 			<limits>0.01~1</limits>
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
 		<defName>StatPatch_AccuracyTouch</defName>
 		<statDef>AccuracyTouch</statDef>
 		<patch>
 			<label>AccuracyTouch</label>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
 		<defName>StatPatch_AccuracyShort</defName>
 		<statDef>AccuracyShort</statDef>
 		<patch>
 			<label>AccuracyShort</label>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
 		<defName>StatPatch_AccuracyMedium</defName>
 		<statDef>AccuracyMedium</statDef>
 		<patch>
 			<label>AccuracyMedium</label>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchRangedAccuracyBase">
 		<defName>StatPatch_AccuracyLong</defName>
 		<statDef>AccuracyLong</statDef>
 		<patch>
 			<label>AccuracyLong</label>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_RangedWeapon_Cooldown</defName>
 		<statDef>RangedWeapon_Cooldown</statDef>
 		<patch>
@@ -50,9 +50,9 @@
 			<limits>0.01~999999</limits>
 			<toStringStyle>FloatTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_RangedWeapon_DamageMultiplier</defName>
 		<statDef>RangedWeapon_DamageMultiplier</statDef>
 		<patch>
@@ -62,5 +62,5 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

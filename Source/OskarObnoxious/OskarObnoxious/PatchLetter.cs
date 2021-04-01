@@ -4,7 +4,7 @@ using System.Linq;
 using Verse;
 using RimWorld;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchLetter : LetterWithTimeout
     {

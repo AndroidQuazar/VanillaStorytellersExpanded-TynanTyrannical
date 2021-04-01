@@ -3,7 +3,7 @@ using Verse;
 using RimWorld;
 using System;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchRangeStat : PatchRange
     {

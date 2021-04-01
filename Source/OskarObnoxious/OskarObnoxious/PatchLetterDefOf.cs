@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Verse;
 using RimWorld;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     [DefOf]
     public static class PatchLetterDefOf

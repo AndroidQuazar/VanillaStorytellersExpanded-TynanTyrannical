@@ -5,7 +5,7 @@ using Verse;
 using RimWorld;
 using UnityEngine;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchWindow : Window
     {

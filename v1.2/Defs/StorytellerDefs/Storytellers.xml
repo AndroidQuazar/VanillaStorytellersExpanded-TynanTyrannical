@@ -2,7 +2,7 @@
 <Defs>
 
 	<StorytellerDef ParentName="BaseStoryteller">
-		<defName>VSE_TynanTyrannical</defName>
+		<defName>VSE_OskarObnoxious</defName>
 		<label>Oskar Obnoxious</label>
 		<description>Oskar Obnoxious holds no regard for ongoing stories. Things will turn on their heads countless times before a colony goes down in flames. Frequently released Patch notes can alter the values of the game, changing almost anything in the game completely by a random number.</description>
 		<portraitLarge>UI/Storytellers/OskarObnoxious</portraitLarge>

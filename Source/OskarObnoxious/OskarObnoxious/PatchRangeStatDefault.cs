@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Verse;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchRangeStatDefault : PatchRangeStat
     {

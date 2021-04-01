@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_MoveSpeed</defName>
 		<statDef>MoveSpeed</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0.15~20</limits>
 			<toStringStyle>FloatTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MentalBreakThreshold</defName>
 		<statDef>MentalBreakThreshold</statDef>
 		<patch>
@@ -21,9 +21,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_GlobalLearningFactor</defName>
 		<statDef>GlobalLearningFactor</statDef>
 		<patch>
@@ -33,9 +33,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_HungerRateMultiplier</defName>
 		<statDef>HungerRateMultiplier</statDef>
 		<patch>
@@ -45,9 +45,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_RestRateMultiplier</defName>
 		<statDef>RestRateMultiplier</statDef>
 		<patch>
@@ -57,9 +57,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_EatingSpeed</defName>
 		<statDef>EatingSpeed</statDef>
 		<patch>
@@ -69,9 +69,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_ComfyTemperatureMin</defName>
 		<statDef>ComfyTemperatureMin</statDef>
 		<patch>
@@ -80,9 +80,9 @@
 			<limits>-2000~2000</limits>
 			<toStringStyle>Temperature</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_ComfyTemperatureMax</defName>
 		<statDef>ComfyTemperatureMax</statDef>
 		<patch>
@@ -91,9 +91,9 @@
 			<limits>-2000~2000</limits>
 			<toStringStyle>Temperature</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ImmunityGainSpeed</defName>
 		<statDef>ImmunityGainSpeed</statDef>
 		<patch>
@@ -103,9 +103,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_CarryingCapacity</defName>
 		<statDef>CarryingCapacity</statDef>
 		<patch>
@@ -114,9 +114,9 @@
 			<limits>1~99999</limits>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MeatAmount</defName>
 		<statDef>HungerRateMultiplier</statDef>
 		<patch>
@@ -125,9 +125,9 @@
 			<limits>1~99999</limits>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_LeatherAmount</defName>
 		<statDef>LeatherAmount</statDef>
 		<patch>
@@ -137,9 +137,9 @@
 			<ignoreIfValue>0</ignoreIfValue>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MinimumHandlingSkill</defName>
 		<statDef>MinimumHandlingSkill</statDef>
 		<patch>
@@ -149,9 +149,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_PainShockThreshold</defName>
 		<statDef>PainShockThreshold</statDef>
 		<patch>
@@ -161,9 +161,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ForagedNutritionPerDay</defName>
 		<statDef>ForagedNutritionPerDay</statDef>
 		<patch>
@@ -173,5 +173,5 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>FloatMaxTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

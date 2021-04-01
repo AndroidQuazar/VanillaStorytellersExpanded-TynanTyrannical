@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_WorkSpeedGlobal</defName>
 		<statDef>WorkSpeedGlobal</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0.3~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MiningSpeed</defName>
 		<statDef>MiningSpeed</statDef>
 		<patch>
@@ -20,9 +20,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_DeepDrillingSpeed</defName>
 		<statDef>DeepDrillingSpeed</statDef>
 		<patch>
@@ -31,9 +31,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MiningYield</defName>
 		<statDef>MiningYield</statDef>
 		<patch>
@@ -43,9 +43,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_SmoothingSpeed</defName>
 		<statDef>SmoothingSpeed</statDef>
 		<patch>
@@ -54,9 +54,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ResearchSpeed</defName>
 		<statDef>ResearchSpeed</statDef>
 		<patch>
@@ -65,9 +65,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_AnimalGatherSpeed</defName>
 		<statDef>AnimalGatherSpeed</statDef>
 		<patch>
@@ -76,9 +76,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_AnimalGatherYield</defName>
 		<statDef>AnimalGatherYield</statDef>
 		<patch>
@@ -88,9 +88,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_PlantWorkSpeed</defName>
 		<statDef>PlantWorkSpeed</statDef>
 		<patch>
@@ -99,9 +99,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_PlantHarvestYield</defName>
 		<statDef>PlantHarvestYield</statDef>
 		<patch>
@@ -111,9 +111,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_HuntingStealth</defName>
 		<statDef>HuntingStealth</statDef>
 		<patch>
@@ -122,9 +122,9 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ConstructionSpeed</defName>
 		<statDef>ConstructionSpeed</statDef>
 		<patch>
@@ -133,5 +133,5 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

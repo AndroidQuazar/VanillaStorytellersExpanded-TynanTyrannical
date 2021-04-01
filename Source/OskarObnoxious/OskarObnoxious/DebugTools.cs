@@ -4,22 +4,22 @@ using System.Linq;
 using Verse;
 using RimWorld;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public static class DebugTools
     {
-        [DebugAction("Tynan Tyrannical", "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction("Oskar Obnoxious", "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesSingle()
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
             {
-                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                Messages.Message("Cannot initiate Patch Notes without Oskar Obnoxious as the active storyteller.", MessageTypeDefOf.RejectInput);
                 return;
             }
             GameComponent_PatchNotes.InitiatePatchNotes();
         }
 
-        [DebugAction("Tynan Tyrannical", "Send Specific Patch Note", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction("Oskar Obnoxious", "Send Specific Patch Note", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesChoice()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
@@ -71,12 +71,12 @@ namespace TynanTyrannical
 	        Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
         }
 
-        [DebugAction("Tynan Tyrannical", "Send Patch Notes x5", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction("Oskar Obnoxious", "Send Patch Notes x5", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesBatch()
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
             {
-                Messages.Message("Cannot initiate Patch Notes without Tynan Tyrannical as the active storyteller.", MessageTypeDefOf.RejectInput);
+                Messages.Message("Cannot initiate Patch Notes without Oskar Obnoxious as the active storyteller.", MessageTypeDefOf.RejectInput);
                 return;
             }
             for (int i = 0; i < 5; i++)
@@ -85,13 +85,13 @@ namespace TynanTyrannical
             }
         }
 
-        [DebugAction("Tynan Tyrannical", "Output PatchTypeDef Data", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction("Oskar Obnoxious", "Output PatchTypeDef Data", allowedGameStates = AllowedGameStates.Playing)]
         private static void OutputPatchTypeDefs()
         {
             Utility.OutputAllPatchTypesDefs();
         }
 
-        [DebugAction("Tynan Tyrannical", "Clear Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction("Oskar Obnoxious", "Clear Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void ClearPatchNotes()
         {
             GameComponent_PatchNotes.Instance.patchNotes.Clear();

@@ -4,7 +4,7 @@ using System.Reflection;
 using Verse;
 using RimWorld;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class DefPatchPair : IExposable
     {

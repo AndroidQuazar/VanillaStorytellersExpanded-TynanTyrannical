@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef Name="StatPatchBase" Abstract="True">
+	<OskarObnoxious.StatPatchDef Name="StatPatchBase" Abstract="True">
 		<type>StatModifier</type>
 		<patch>
 			<name>value</name>
 			<weightToPatch>0.01</weightToPatch>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef Name="StatPatchGenericBase" Abstract="True">
+	<OskarObnoxious.StatPatchDef Name="StatPatchGenericBase" Abstract="True">
 		<type>StatDef</type>
 		<label>Global Stat</label>
-		<patch Class="TynanTyrannical.PatchRangeStatDefault">
+		<patch Class="OskarObnoxious.PatchRangeStatDefault">
 			<name>defaultBaseValue</name>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

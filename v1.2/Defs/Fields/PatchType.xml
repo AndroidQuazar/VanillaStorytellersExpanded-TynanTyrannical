@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.PatchTypeDef>
+	<OskarObnoxious.PatchTypeDef>
 		<defName>ThingDef</defName>
 		<type>ThingDef</type>
 		<fields>
@@ -50,11 +50,11 @@
 				<name>verbs</name>
 			</li>
 		</fields>
-	</TynanTyrannical.PatchTypeDef>
+	</OskarObnoxious.PatchTypeDef>
 	
 	<!-- Included for transparency, only default values are checked and registered as patchable -->
-	<TynanTyrannical.PatchTypeDef>
+	<OskarObnoxious.PatchTypeDef>
 		<defName>StatPatchDef</defName>
-		<type>TynanTyrannical.StatPatchDef</type>
-	</TynanTyrannical.PatchTypeDef>
+		<type>OskarObnoxious.StatPatchDef</type>
+	</OskarObnoxious.PatchTypeDef>
 </Defs>

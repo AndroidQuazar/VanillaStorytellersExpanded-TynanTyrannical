@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MeleeHitChance</defName>
 		<statDef>MeleeHitChance</statDef>
 		<patch>
@@ -10,9 +10,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_MeleeDodgeChance</defName>
 		<statDef>MeleeDodgeChance</statDef>
 		<patch>
@@ -22,9 +22,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ShootingAccuracyPawn</defName>
 		<statDef>ShootingAccuracyPawn</statDef>
 		<patch>
@@ -34,9 +34,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_AimingDelayFactor</defName>
 		<statDef>AimingDelayFactor</statDef>
 		<patch>
@@ -45,9 +45,9 @@
 			<limits>0.01~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_PawnTrapSpringChance</defName>
 		<statDef>PawnTrapSpringChance</statDef>
 		<patch>
@@ -57,9 +57,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_IncomingDamageFactor</defName>
 		<statDef>IncomingDamageFactor</statDef>
 		<patch>
@@ -69,5 +69,5 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

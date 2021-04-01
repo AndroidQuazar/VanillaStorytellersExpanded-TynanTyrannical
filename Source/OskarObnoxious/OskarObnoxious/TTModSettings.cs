@@ -6,7 +6,7 @@ using RimWorld;
 using UnityEngine;
 using SmashTools;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class TTModSettings : ModSettings
     {
@@ -92,7 +92,7 @@ namespace TynanTyrannical
 
         public override string SettingsCategory()
         {
-            return "TynanTyrannical".Translate();
+            return "OskarObnoxious".Translate();
         }
     }
 }

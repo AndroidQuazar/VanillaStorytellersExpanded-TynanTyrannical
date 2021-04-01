@@ -3,7 +3,7 @@
 	<LetterDef>
 		<defName>PatchLetter</defName>
 		<label>New Patch</label>
-		<letterClass>TynanTyrannical.PatchLetter</letterClass>
+		<letterClass>OskarObnoxious.PatchLetter</letterClass>
 		<color>(40, 125, 235)</color>
 		<flashColor>(100, 160, 250)</flashColor>
 		<flashInterval>4</flashInterval>

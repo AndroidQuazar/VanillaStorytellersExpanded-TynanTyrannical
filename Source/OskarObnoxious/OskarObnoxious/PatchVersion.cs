@@ -2,7 +2,7 @@
 using System.Globalization;
 using Verse;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public struct PatchVersion
     {

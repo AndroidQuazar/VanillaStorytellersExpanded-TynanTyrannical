@@ -7,8 +7,8 @@
     <ProjectGuid>{6F9A1891-838A-4AC1-BED2-616E706DEC14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TynanTyrannical</RootNamespace>
-    <AssemblyName>TynanTyrannical</AssemblyName>
+    <RootNamespace>OskarObnoxious</RootNamespace>
+    <AssemblyName>OskarObnoxious</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

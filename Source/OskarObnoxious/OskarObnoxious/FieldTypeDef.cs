@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class FieldTypeDef : PatchDef
     {

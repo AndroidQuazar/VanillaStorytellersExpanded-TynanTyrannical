@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_SmeltingSpeed</defName>
 		<statDef>SmeltingSpeed</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_GeneralLaborSpeed</defName>
 		<statDef>GeneralLaborSpeed</statDef>
 		<patch>
@@ -20,9 +20,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_DrugSynthesisSpeed</defName>
 		<statDef>DrugSynthesisSpeed</statDef>
 		<patch>
@@ -31,9 +31,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_CookSpeed</defName>
 		<statDef>CookSpeed</statDef>
 		<patch>
@@ -42,9 +42,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_FoodPoisonChance</defName>
 		<statDef>FoodPoisonChance</statDef>
 		<patch>
@@ -53,9 +53,9 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_DrugCookingSpeed</defName>
 		<statDef>DrugCookingSpeed</statDef>
 		<patch>
@@ -64,11 +64,11 @@
 			<limits>0.1~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
 	
 	<!-- Butchery -->
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ButcheryFleshSpeed</defName>
 		<statDef>ButcheryFleshSpeed</statDef>
 		<patch>
@@ -77,9 +77,9 @@
 			<limits>0~1</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ButcheryMechanoidSpeed</defName>
 		<statDef>ButcheryMechanoidSpeed</statDef>
 		<patch>
@@ -88,9 +88,9 @@
 			<limits>0~1</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ButcheryFleshEfficiency</defName>
 		<statDef>ButcheryFleshEfficiency</statDef>
 		<patch>
@@ -99,9 +99,9 @@
 			<limits>0~1</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ButcheryMechanoidEfficiency</defName>
 		<statDef>ButcheryMechanoidEfficiency</statDef>
 		<patch>
@@ -110,5 +110,5 @@
 			<limits>0~1</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

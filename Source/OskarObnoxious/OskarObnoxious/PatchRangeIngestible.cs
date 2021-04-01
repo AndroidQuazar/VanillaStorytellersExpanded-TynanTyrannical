@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     public class PatchRangeIngestible : PatchRange
     {

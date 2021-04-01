@@ -5,7 +5,7 @@ using System.Reflection;
 using Verse;
 using UnityEngine;
 
-namespace TynanTyrannical
+namespace OskarObnoxious
 {
     [StaticConstructorOnStartup]
     public static class Utility
@@ -15,7 +15,7 @@ namespace TynanTyrannical
 
         static Utility()
         {
-            Log.Message($"<color=orange>[TynanTyrannical]</color> version 1.0.0");
+            Log.Message($"<color=orange>[OskarObnoxious]</color> version 1.0.0");
             mod = LoadedModManager.RunningMods.FirstOrDefault((ModContentPack mod) => mod.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly()));
             ImportNames();
         }

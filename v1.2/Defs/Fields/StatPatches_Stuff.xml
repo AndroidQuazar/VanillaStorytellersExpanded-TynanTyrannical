@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_StuffPower_Armor_Sharp</defName>
 		<statDef>StuffPower_Armor_Sharp</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_StuffPower_Armor_Blunt</defName>
 		<statDef>StuffPower_Armor_Blunt</statDef>
 		<patch>
@@ -20,9 +20,9 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_StuffPower_Armor_Heat</defName>
 		<statDef>StuffPower_Armor_Heat</statDef>
 		<patch>
@@ -31,9 +31,9 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_StuffPower_Insulation_Cold</defName>
 		<statDef>StuffPower_Insulation_Cold</statDef>
 		<patch>
@@ -42,9 +42,9 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_StuffPower_Insulation_Heat</defName>
 		<statDef>StuffPower_Insulation_Heat</statDef>
 		<patch>
@@ -53,5 +53,5 @@
 			<limits>0~99999</limits>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

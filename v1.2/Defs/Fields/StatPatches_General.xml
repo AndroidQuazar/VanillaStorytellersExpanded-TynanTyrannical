@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_Mass</defName>
 		<statDef>Mass</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0.01~99999</limits>
 			<toStringStyle>FloatTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_MaxHitPoints</defName>
 		<statDef>MaxHitPoints</statDef>
 		<patch>
@@ -21,9 +21,9 @@
 			<roundTo>1</roundTo>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_MarketValue</defName>
 		<statDef>MarketValue</statDef>
 		<patch>
@@ -33,9 +33,9 @@
 			<roundTo>1</roundTo>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_SellPriceFactor</defName>
 		<statDef>SellPriceFactor</statDef>
 		<patch>
@@ -45,9 +45,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_WorkToMake</defName>
 		<statDef>WorkToMake</statDef>
 		<patch>
@@ -57,9 +57,9 @@
 			<roundTo>1</roundTo>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_Beauty</defName>
 		<statDef>Beauty</statDef>
 		<patch>
@@ -69,9 +69,9 @@
 			<roundTo>1</roundTo>
 			<toStringStyle>Integer</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_Nutrition</defName>
 		<statDef>Nutrition</statDef>
 		<patch>
@@ -82,9 +82,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>FloatTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
 		<defName>StatPatch_ShootingAccuracyTurret</defName>
 		<statDef>ShootingAccuracyTurret</statDef>
 		<patch>
@@ -94,5 +94,5 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentZero</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>

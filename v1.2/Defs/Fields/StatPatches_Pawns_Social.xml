@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_NegotiationAbility</defName>
 		<statDef>NegotiationAbility</statDef>
 		<patch>
@@ -9,9 +9,9 @@
 			<limits>0.4~99999</limits>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_PawnBeauty</defName>
 		<statDef>PawnBeauty</statDef>
 		<patch>
@@ -19,9 +19,9 @@
 			<range>-3~3</range>
 			<toStringStyle>FloatOne</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_ArrestSuccessChance</defName>
 		<statDef>ArrestSuccessChance</statDef>
 		<patch>
@@ -31,9 +31,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_TradePriceImprovement</defName>
 		<statDef>TradePriceImprovement</statDef>
 		<patch>
@@ -43,9 +43,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_SocialImpact</defName>
 		<statDef>SocialImpact</statDef>
 		<patch>
@@ -55,9 +55,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_TameAnimalChance</defName>
 		<statDef>TameAnimalChance</statDef>
 		<patch>
@@ -67,9 +67,9 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 	
-	<TynanTyrannical.StatPatchDef ParentName="StatPatchGenericBase">
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
 		<defName>StatPatch_TrainAnimalChance</defName>
 		<statDef>TrainAnimalChance</statDef>
 		<patch>
@@ -79,5 +79,5 @@
 			<multiplier>false</multiplier>
 			<toStringStyle>PercentTwo</toStringStyle>
 		</patch>
-	</TynanTyrannical.StatPatchDef>
+	</OskarObnoxious.StatPatchDef>
 </Defs>
