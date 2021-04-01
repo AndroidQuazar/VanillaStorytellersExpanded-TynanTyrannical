@@ -13,7 +13,7 @@ namespace OskarObnoxious
         public Dictionary<DefPatchPair, float> currentDefValues = new Dictionary<DefPatchPair, float>();
         public List<PatchInfo> patchNotes = new List<PatchInfo>();
 
-        public static bool StorytellerLoaded { get; private set; }
+        public static bool StorytellerLoaded => Find.Storyteller?.def == StorytellerDefOf.VSE_OskarObnoxious;
 
         /* Do Not Modify */
         public PatchVersion latestVersion;
@@ -51,7 +51,6 @@ namespace OskarObnoxious
             {
                 currentDefValues = new Dictionary<DefPatchPair, float>();
             }
-            StorytellerLoaded = Find.Storyteller.def == StorytellerDefOf.VSE_OskarObnoxious;
         }
 
         public override void GameComponentTick()
