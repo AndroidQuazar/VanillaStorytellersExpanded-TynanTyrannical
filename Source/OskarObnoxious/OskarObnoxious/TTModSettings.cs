@@ -10,7 +10,7 @@ namespace OskarObnoxious
 {
     public class TTModSettings : ModSettings
     {
-        private const int TicksBetweenPatchNotes = 25000;
+        private const int TicksBetweenPatchNotes = 180000;
         private const int DefsChangedPerPatch = 5;
         private const int FieldsChangedPerDef = 1;
         private const int PatchNotesStored = 5;

@@ -15,7 +15,7 @@
 	
 	<!-- Settings -->
 	<TicksBetweenPatchNotes>Ticks Between Patch Notes</TicksBetweenPatchNotes>
-	<TicksBetweenPatchNotesTooltip>Ticks till the next patch notes will be released.</TicksBetweenPatchNotesTooltip>
+	<TicksBetweenPatchNotesTooltip>Ticks till the next patch notes will be released. Google the RimWorld time wiki if you're unsure what the values would be. 60,000 ticks = 1 Day</TicksBetweenPatchNotesTooltip>
 	
 	<DefsChangedPerPatch>Defs</DefsChangedPerPatch>
 	<DefsChangedPerPatchTooltip>Number of Defs patched per Patch Notes</DefsChangedPerPatchTooltip>
