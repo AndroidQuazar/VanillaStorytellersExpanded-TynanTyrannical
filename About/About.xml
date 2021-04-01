@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>Vanilla Storytellers Expanded - Tynan Tyrannical</name>
+    <name>Vanilla Storytellers Expanded - Oskar Obnoxious</name>
     <author>Oskar Potocki, Smash Phil</author>
     <url></url>
 	<supportedVersions>
 		<li>1.2</li>
 	</supportedVersions>
-	<packageId>VSE.TynanTyrannical</packageId>
+	<packageId>VSE.OskarObnoxious</packageId>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 	</loadAfter>
 <description>Vanilla Storytellers Expanded is a brand new mod series featuring standalone storytellers, bringing new, unique mechanics to the game.
 
-"Tynan Tyrannical holds no regard for ongoing stories. Things will turn on their heads countless times before a colony goes down in flames. Frequently released Patch notes can alter the values of the game, changing almost anything in the game completely by a random number."
+"Oskar Obnoxious holds no regard for ongoing stories. Things will turn on their heads countless times before a colony goes down in flames. Frequently released Patch notes can alter the values of the game, changing almost anything in the game completely by a random number."
 
-Tynan Tyrannical comes with the following traits:
+Oskar Obnoxious comes with the following traits:
 
 Patch Notes
 This storyteller releases patch notes every few days, changing the game drastically. Patch notes change random values of random Defs into random numbers. This can result in items becoming incredibly unbalanced, overpowered or worthless.
