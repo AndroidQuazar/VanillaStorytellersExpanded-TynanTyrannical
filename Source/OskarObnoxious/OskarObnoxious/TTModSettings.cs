@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Verse;
+using Verse.Sound;
 using RimWorld;
 using UnityEngine;
-using SmashTools;
 
 namespace OskarObnoxious
 {
@@ -66,13 +66,13 @@ namespace OskarObnoxious
             };
             lister.Begin(rect);
 
-            lister.IntegerBox("TicksBetweenPatchNotes".Translate(), "TicksBetweenPatchNotesTooltip".Translate(), ref settings.ticksBetweenPatchNotes, 200, 0, 1);
+            IntegerBox(lister, "TicksBetweenPatchNotes".Translate(), "TicksBetweenPatchNotesTooltip".Translate(), ref settings.ticksBetweenPatchNotes, 200, 0, 1);
             lister.Gap(2);
 
-            lister.SliderLabeled("DefsChangedPerPatch".Translate(), "DefsChangedPerPatchTooltip".Translate(), string.Empty, ref settings.defsChangedPerPatch, 1, 10);
-            lister.SliderLabeled("FieldsChangedPerDef".Translate(), "FieldsChangedPerDefTooltip".Translate(), string.Empty, ref settings.fieldsChangedPerDef, 1, 10);
+            SliderLabeled(lister, "DefsChangedPerPatch".Translate(), "DefsChangedPerPatchTooltip".Translate(), string.Empty, ref settings.defsChangedPerPatch, 1, 10);
+            SliderLabeled(lister, "FieldsChangedPerDef".Translate(), "FieldsChangedPerDefTooltip".Translate(), string.Empty, ref settings.fieldsChangedPerDef, 1, 10);
 
-            lister.SliderLabeled("PatchNotesStored".Translate(), "PatchNotesStoredTooltip".Translate(), string.Empty, ref settings.patchNotesStored, 1, 20);
+            SliderLabeled(lister, "PatchNotesStored".Translate(), "PatchNotesStoredTooltip".Translate(), string.Empty, ref settings.patchNotesStored, 1, 20);
 
             lister.GapLine(8);
 
@@ -82,7 +82,14 @@ namespace OskarObnoxious
             }
             if (lister.ButtonText("ShowAllPatchNotes".Translate()))
             {
-                PatchWindow.OpenWindow();
+                if (Current.ProgramState == ProgramState.Playing)
+				{
+                    PatchWindow.OpenWindow();
+                }
+				else
+				{
+                    SoundDefOf.ClickReject.PlayOneShotOnCamera();
+				}
             }
 
             lister.CheckboxLabeled("DebugShowPatchGeneration".Translate(), ref settings.debugShowPatchGeneration, "DebugShowPatchGenerationTooltip".Translate());
@@ -93,6 +100,64 @@ namespace OskarObnoxious
         public override string SettingsCategory()
         {
             return "OskarObnoxious".Translate();
+        }
+
+        public static void IntegerBox(Listing lister, string text, string tooltip, ref int value, float labelLength, float padding, int min = int.MinValue, int max = int.MaxValue)
+        {
+            Rect rect = lister.GetRect(Text.LineHeight);
+
+            Rect rectLeft = new Rect(rect.x, rect.y, labelLength, rect.height);
+            Rect rectRight = new Rect(rect.x + labelLength + padding, rect.y, rect.width - labelLength - padding, rect.height);
+
+            Color color = GUI.color;
+            Widgets.Label(rectLeft, text);
+
+            var align = Text.CurTextFieldStyle.alignment;
+            Text.CurTextFieldStyle.alignment = TextAnchor.MiddleLeft;
+            string buffer = value.ToString();
+            Widgets.TextFieldNumeric(rectRight, ref value, ref buffer, min, max);
+
+            if (!tooltip.NullOrEmpty())
+            {
+                DoTooltipRegion(rect, tooltip, true);
+            }
+            Text.CurTextFieldStyle.alignment = align;
+            GUI.color = color;
+        }
+
+        public static void SliderLabeled(Listing lister, string label, string tooltip, string endSymbol, ref int value, int min, int max, string maxValueDisplay = "", string minValueDisplay = "")
+        {
+            lister.Gap(12f);
+            Rect rect = lister.GetRect(24f);
+            string format = string.Format("{0}" + endSymbol, value);
+            if (!maxValueDisplay.NullOrEmpty())
+            {
+                if (value == max)
+                {
+                    format = maxValueDisplay;
+                }
+            }
+            if (!minValueDisplay.NullOrEmpty())
+            {
+                if (value == min)
+                {
+                    format = minValueDisplay;
+                }
+            }
+            if (!tooltip.NullOrEmpty())
+            {
+                DoTooltipRegion(rect, tooltip, true);
+            }
+            value = (int)Widgets.HorizontalSlider(rect, value, min, max, false, null, label, format);
+        }
+
+        public static void DoTooltipRegion(Rect rect, string tooltip, bool slider = false)
+        {
+            if (slider)
+            {
+                rect.y -= Mathf.Round(rect.height / 2f) + 3;
+            }
+            TooltipHandler.TipRegion(rect, tooltip);
         }
     }
 }
