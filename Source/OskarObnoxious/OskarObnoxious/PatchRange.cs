@@ -65,8 +65,8 @@ namespace OskarObnoxious
 
         public virtual void ResolveReferences(Type type)
         {
-            FieldInfo fieldInfo = type.GetField(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-            if (fieldInfo is null)
+            FieldInfo = type.GetField(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            if (FieldInfo is null)
             {
                 Log.Error($"Could not resolve {name} in {type}.");
                 if (TTMod.settings.debugShowPatchGeneration)
@@ -79,7 +79,6 @@ namespace OskarObnoxious
                     Log.Message("==========================================");
                 }
             }
-            FieldInfo = fieldInfo;
         }
 
         public IEnumerable<string> ConfigErrors()

@@ -194,10 +194,12 @@ namespace OskarObnoxious
                 {
                     if (patch.FieldInfo.FieldType.IsNumericType())
                     {
+                        bool retry = false;
+                        RevalidateStat:;
                         try
                         {
                             float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
-                            if (baseValue != patch.ignoreIfValue)
+                            if (baseValue != patch.ignoreIfValue && !patch.originalValues.ContainsKey(def))
                             {
                                 patch.originalValues.Add(def, baseValue);
                                 patchableFields.Add(new Pair<object, PatchRange>(parent, patch));
@@ -205,7 +207,26 @@ namespace OskarObnoxious
                         }
                         catch (ArgumentException ex)
                         {
-                            Log.Error($"Exception thrown when registering {patch.DisplayName} for patching. Def=\"{def}\" Parent=\"{parent}\" Exception=\"{ex.Message}\"");
+                            if (parent is StatModifier stat && !retry)
+							{
+                                string statName = patch.name;
+                                Type type = typeof(StatModifier);
+                                if (statName == "value")
+								{
+                                    statName = "defaultBaseValue";
+                                    type = typeof(StatDef);
+                                }
+                                else if (statName == "defaultBaseValue")
+								{
+                                    statName = "value";
+                                    type = typeof(StatModifier);
+                                }
+                                retry = true;
+                                patch.name = statName;
+                                patch.ResolveReferences(type);
+                                goto RevalidateStat;
+							}
+                            Log.Warning($"Exception thrown when registering {patch.DisplayName} patch. Patch will not apply ingame.\n\nDef=\"{def}\" Parent=\"{parent}\" Exception=\"{ex.Message}\"");
                         }
                     }
                     else if (nestedTypes.TryGetValue(patch.FieldInfo.FieldType, out FieldTypeDef fieldTypeDef))
