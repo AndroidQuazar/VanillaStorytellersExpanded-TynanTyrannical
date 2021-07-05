@@ -42,7 +42,8 @@ namespace OskarObnoxious
         public static void ReceivePatchNotes()
         {
             StringBuilder stringBuilder = new StringBuilder();
-
+            List<string> debugLogs = new List<string>();
+            debugLogs.Add($"Beginning patch notes generation. DefsChangedPerPatch={TTMod.settings.defsChangedPerPatch}");
             defsAffected.Clear();
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
             {
@@ -52,8 +53,16 @@ namespace OskarObnoxious
                     Log.Error($"Unable to patch {TTMod.settings.defsChangedPerPatch} unique defs.");
                     break;
                 }
+                debugLogs.Add($"Patching \"{defToChange.Key.defName}\" Number of patches possible = {defToChange.Value.Count}");
                 PatchFields(defToChange, stringBuilder);
             }
+            if (TTMod.settings.debugShowPatchGeneration)
+			{
+                Log.Message("------------------------------");
+                debugLogs.ForEach(log => Log.Message(log));
+                Log.Message($"PatchNotes StringBuilder:\n{stringBuilder}");
+                Log.Message("------------------------------");
+			}
             SendPatchLetter(stringBuilder.ToString());
         }
 

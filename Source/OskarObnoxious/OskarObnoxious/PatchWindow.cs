@@ -43,7 +43,8 @@ namespace OskarObnoxious
 
             var font = Text.Font;
 
-            lister.BeginScrollView(rect, ref scrollPosition, ref viewRect);
+            Widgets.BeginScrollView(rect, ref scrollPosition, viewRect);
+            lister.Begin(viewRect);
             foreach (PatchInfo patchNote in GameComponent_PatchNotes.Instance.patchNotes)
             {
                 Text.Font = GameFont.Medium;
@@ -52,7 +53,8 @@ namespace OskarObnoxious
                 Text.Font = GameFont.Small;
                 lister.Label(patchNote.text);
             }
-            lister.EndScrollView(ref viewRect);
+            lister.End();
+            Widgets.EndScrollView();
 
             Text.Font = font;
         }
@@ -62,14 +64,15 @@ namespace OskarObnoxious
             float patchNotesHeight = 0;
             var font = Text.Font;
             int i = 0;
+            float width = WindowWidth - ScrollbarPadding - (Margin * 2);
             foreach (PatchInfo patchNote in GameComponent_PatchNotes.Instance.patchNotes)
             {
                 i++;
                 Text.Font = GameFont.Medium;
-                patchNotesHeight += Text.CalcHeight(patchNote.title, WindowWidth - WindowContractBy);
-                patchNotesHeight += Text.CalcHeight(patchNote.dateOfPatch, WindowWidth - WindowContractBy);
+                patchNotesHeight += Text.CalcHeight($"<b>{patchNote.title}</b>", width) * 1.25f;
+                patchNotesHeight += Text.CalcHeight(patchNote.dateOfPatch, width);
                 Text.Font = GameFont.Small;
-                patchNotesHeight += Text.CalcHeight(patchNote.text, WindowWidth - (WindowContractBy + ScrollbarPadding)) + 5;
+                patchNotesHeight += Text.CalcHeight(patchNote.text, width);
             }
             PatchNotesHeight = patchNotesHeight;
             Text.Font = font;

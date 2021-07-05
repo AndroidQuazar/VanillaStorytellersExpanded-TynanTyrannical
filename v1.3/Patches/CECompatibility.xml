@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAttributeSet">
+					<xpath>Defs/OskarObnoxious.StatPatchDef[defName="StatPatch_MeleeDodgeChance"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>StatPatchBase</value>
+				</li>
+				<li Class="PatchOperationAttributeSet">
+					<xpath>Defs/OskarObnoxious.StatPatchDef[defName="StatPatch_ShootingAccuracyPawn"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>StatPatchBase</value>
+				</li>
+				<li Class="PatchOperationAttributeSet">
+					<xpath>Defs/OskarObnoxious.StatPatchDef[defName="StatPatch_AimingDelayFactor"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>StatPatchBase</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

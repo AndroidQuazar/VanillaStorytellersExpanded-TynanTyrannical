@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MeleeWeapon_DamageMultiplier</defName>
+		<statDef>MeleeWeapon_DamageMultiplier</statDef>
+		<patch>
+			<label>MeleeWeapon_DamageMultiplier</label>
+			<range>0~3</range>
+			<limits>0~3</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

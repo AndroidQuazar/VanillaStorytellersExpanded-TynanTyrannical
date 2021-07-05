@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_WorkSpeedGlobal</defName>
+		<statDef>WorkSpeedGlobal</statDef>
+		<patch>
+			<label>WorkSpeedGlobal</label>
+			<range>0~3</range>
+			<limits>0.3~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MiningSpeed</defName>
+		<statDef>MiningSpeed</statDef>
+		<patch>
+			<label>MiningSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_DeepDrillingSpeed</defName>
+		<statDef>DeepDrillingSpeed</statDef>
+		<patch>
+			<label>DeepDrillingSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MiningYield</defName>
+		<statDef>MiningYield</statDef>
+		<patch>
+			<label>MiningYield</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_SmoothingSpeed</defName>
+		<statDef>SmoothingSpeed</statDef>
+		<patch>
+			<label>SmoothingSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ResearchSpeed</defName>
+		<statDef>ResearchSpeed</statDef>
+		<patch>
+			<label>ResearchSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_AnimalGatherSpeed</defName>
+		<statDef>AnimalGatherSpeed</statDef>
+		<patch>
+			<label>AnimalGatherSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_AnimalGatherYield</defName>
+		<statDef>AnimalGatherYield</statDef>
+		<patch>
+			<label>AnimalGatherYield</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_PlantWorkSpeed</defName>
+		<statDef>PlantWorkSpeed</statDef>
+		<patch>
+			<label>PlantWorkSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_PlantHarvestYield</defName>
+		<statDef>PlantHarvestYield</statDef>
+		<patch>
+			<label>PlantHarvestYield</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_HuntingStealth</defName>
+		<statDef>HuntingStealth</statDef>
+		<patch>
+			<label>HuntingStealth</label>
+			<range>0~3</range>
+			<limits>0~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ConstructionSpeed</defName>
+		<statDef>ConstructionSpeed</statDef>
+		<patch>
+			<label>ConstructionSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

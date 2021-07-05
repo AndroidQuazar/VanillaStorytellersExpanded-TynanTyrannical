@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_MoveSpeed</defName>
+		<statDef>MoveSpeed</statDef>
+		<patch>
+			<label>MoveSpeed</label>
+			<range>0~3</range>
+			<limits>0.15~20</limits>
+			<toStringStyle>FloatTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MentalBreakThreshold</defName>
+		<statDef>MentalBreakThreshold</statDef>
+		<patch>
+			<label>MentalBreakThreshold</label>
+			<range>0.01~0.5</range>
+			<limits>0.01~0.5</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_GlobalLearningFactor</defName>
+		<statDef>GlobalLearningFactor</statDef>
+		<patch>
+			<label>GlobalLearningFactor</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_HungerRateMultiplier</defName>
+		<statDef>HungerRateMultiplier</statDef>
+		<patch>
+			<label>HungerRateMultiplier</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_RestRateMultiplier</defName>
+		<statDef>RestRateMultiplier</statDef>
+		<patch>
+			<label>RestRateMultiplier</label>
+			<range>0.05~2</range>
+			<limits>0.05~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_EatingSpeed</defName>
+		<statDef>EatingSpeed</statDef>
+		<patch>
+			<label>EatingSpeed</label>
+			<range>0.15~2</range>
+			<limits>0.15~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_ComfyTemperatureMin</defName>
+		<statDef>ComfyTemperatureMin</statDef>
+		<patch>
+			<label>ComfyTemperatureMin</label>
+			<range>0~3</range>
+			<limits>-2000~2000</limits>
+			<toStringStyle>Temperature</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_ComfyTemperatureMax</defName>
+		<statDef>ComfyTemperatureMax</statDef>
+		<patch>
+			<label>ComfyTemperatureMax</label>
+			<range>0~3</range>
+			<limits>-2000~2000</limits>
+			<toStringStyle>Temperature</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ImmunityGainSpeed</defName>
+		<statDef>ImmunityGainSpeed</statDef>
+		<patch>
+			<label>ImmunityGainSpeed</label>
+			<range>0.1~2</range>
+			<limits>0.1~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_CarryingCapacity</defName>
+		<statDef>CarryingCapacity</statDef>
+		<patch>
+			<label>CarryingCapacity</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<toStringStyle>Integer</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MeatAmount</defName>
+		<statDef>HungerRateMultiplier</statDef>
+		<patch>
+			<label>HungerRateMultiplier</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<toStringStyle>Integer</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_LeatherAmount</defName>
+		<statDef>LeatherAmount</statDef>
+		<patch>
+			<label>LeatherAmount</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<ignoreIfValue>0</ignoreIfValue>
+			<toStringStyle>Integer</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MinimumHandlingSkill</defName>
+		<statDef>MinimumHandlingSkill</statDef>
+		<patch>
+			<label>MinimumHandlingSkill</label>
+			<range>0~20</range>
+			<limits>0~20</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>Integer</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_PainShockThreshold</defName>
+		<statDef>PainShockThreshold</statDef>
+		<patch>
+			<label>PainShockThreshold</label>
+			<range>0.01~0.99</range>
+			<limits>0.01~0.99</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ForagedNutritionPerDay</defName>
+		<statDef>ForagedNutritionPerDay</statDef>
+		<patch>
+			<label>ForagedNutritionPerDay</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>FloatMaxTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

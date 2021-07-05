@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef Name="StatPatchBase" Abstract="True">
+		<type>StatModifier</type>
+		<patch>
+			<name>value</name>
+			<weightToPatch>0.01</weightToPatch>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef Name="StatPatchGenericBase" Abstract="True">
+		<type>StatDef</type>
+		<label>Global Stat</label>
+		<patch Class="OskarObnoxious.PatchRangeStatDefault">
+			<name>defaultBaseValue</name>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>
