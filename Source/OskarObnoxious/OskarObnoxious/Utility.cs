@@ -15,7 +15,7 @@ namespace OskarObnoxious
 
         static Utility()
         {
-            Log.Message($"<color=orange>[OskarObnoxious]</color> version 1.0.0");
+            Log.Message($"<color=orange>[OskarObnoxious]</color> version 1.3.0010");
             mod = LoadedModManager.RunningMods.FirstOrDefault((ModContentPack mod) => mod.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly()));
             ImportNames();
         }
@@ -86,7 +86,7 @@ namespace OskarObnoxious
                     Log.Message($"Def: {patchInfo.Key.defName} Type: {patchInfo.Key.GetType()}");
                     foreach (var pairPatch in patchInfo.Value)
                     {
-                        Log.Message($"Parent: {pairPatch.First.GetType()} Field: {pairPatch.Second.name} Value: {pairPatch.Second.originalValues[patchInfo.Key]}");
+                        Log.Message($"Parent: {pairPatch.Item1.GetType()} ForDef: {pairPatch.Item2} Field: {pairPatch.Item3.name} Value: {pairPatch.Item3.originalValues[patchInfo.Key]}");
                     }
                 }
             }

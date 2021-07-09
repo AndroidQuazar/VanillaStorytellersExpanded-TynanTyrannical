@@ -93,9 +93,11 @@ namespace OskarObnoxious
                     Def def = defValues.Key;
                     foreach (var patchData in defValues.Value)
                     {
-                        PatchRange patch = patchData.Second;
-                        object parent = patchData.First;
-                        if (currentDefValues.TryGetValue(new DefPatchPair(def.defName, patch.FieldInfo), out float value))
+                        object parent = patchData.Item1;
+                        string statDefName = patchData.Item2;
+                        PatchRange patch = patchData.Item3;
+                        DefPatchPair defPatch = new DefPatchPair(def.defName, statDefName, patch.FieldInfo);
+                        if (currentDefValues.TryGetValue(defPatch, out float value))
                         {
                             float baseValue = Convert.ToSingle(patch.FieldInfo.GetValue(parent));
                             if (!baseValue.Equals(value))
@@ -103,7 +105,7 @@ namespace OskarObnoxious
                                 try
                                 {
                                     object valueConverted = Convert.ChangeType(value, patch.FieldInfo.FieldType);
-                                    //Log.Message($"Def: {def} Field: {patch.DisplayName} Default: {baseValue} Stored: {valueConverted}");
+                                    Log.Message($"Def: {def} Field: {patch.DisplayName} Default: {baseValue} Stored: {valueConverted}");
                                     patch.FieldInfo.SetValue(parent, valueConverted);
                                 }
                                 catch (Exception ex)
@@ -122,6 +124,13 @@ namespace OskarObnoxious
             base.ExposeData();
             Scribe_Values.Look(ref timeTillNextPatchNotes, "timeTillNextPatchNotes");
             Scribe_Collections.Look(ref currentDefValues, "currentDefValues", LookMode.Deep, LookMode.Value);
+            if (Scribe.mode == LoadSaveMode.Saving)
+			{
+                foreach (var defValue in currentDefValues)
+				{
+                    Log.Message($"Def: {defValue.Key.defName} Parent: {defValue.Key.statDefName} Field: {defValue.Key.name}");
+                }
+			}
             Scribe_Collections.Look(ref patchNotes, "patchNotes", LookMode.Deep);
             Scribe_Values.Look(ref latestVersion, "latestVersion");
         }

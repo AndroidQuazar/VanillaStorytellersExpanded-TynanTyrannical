@@ -13,11 +13,11 @@ namespace OskarObnoxious
     [StaticConstructorOnStartup]
     public static class PatchNotes
     {
-        internal static readonly Dictionary<Def, List<Pair<object, PatchRange>>> possibleDefs = new Dictionary<Def, List<Pair<object, PatchRange>>>();
+        internal static readonly Dictionary<Def, List<Tuple<object, string, PatchRange>>> possibleDefs = new Dictionary<Def, List<Tuple<object, string, PatchRange>>>();
         internal static readonly Dictionary<Def, float> defWeights = new Dictionary<Def, float>();
 
         public static readonly Dictionary<Type, FieldTypeDef> nestedTypes = new Dictionary<Type, FieldTypeDef>();
-        public static readonly List<Pair<object, PatchRange>> patchableFields = new List<Pair<object, PatchRange>>();
+        public static readonly List<Tuple<object, string, PatchRange>> patchableFields = new List<Tuple<object, string, PatchRange>>();
 
         private static readonly List<string> defsAffected = new List<string>();
         private static readonly List<string> fieldsAffected = new List<string>();
@@ -79,7 +79,7 @@ namespace OskarObnoxious
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
             {
                 var defToChange = possibleDefs.Where(d => !d.Value.NullOrEmpty() && !defsAffected.Contains(d.Key.defName) && 
-                    d.Value.Any(p => fieldTypeDef.fields.Contains(p.Second))).RandomElementByWeightWithFallback(e => defWeights[e.Key]);
+                    d.Value.Any(p => fieldTypeDef.fields.Contains(p.Item3))).RandomElementByWeightWithFallback(e => defWeights[e.Key]);
                 if (defToChange.Key is null)
                 {
                     break;
@@ -106,7 +106,7 @@ namespace OskarObnoxious
             for (int i = 0; i < TTMod.settings.defsChangedPerPatch; i++)
             {
                 var defToChange = possibleDefs.Where(d => !d.Value.NullOrEmpty() && !defsAffected.Contains(d.Key.defName) && 
-                    d.Value.Any(p => statPatchDef.patch == p.Second)).RandomElementByWeightWithFallback(e => defWeights[e.Key]);
+                    d.Value.Any(p => statPatchDef.patch == p.Item3)).RandomElementByWeightWithFallback(e => defWeights[e.Key]);
                 if (defToChange.Key is null)
                 {
                     break;
@@ -120,7 +120,7 @@ namespace OskarObnoxious
             SendPatchLetter(stringBuilder.ToString());
         }
 
-        private static void PatchFields(KeyValuePair<Def, List<Pair<object, PatchRange>>> defPair, StringBuilder stringBuilder)
+        private static void PatchFields(KeyValuePair<Def, List<Tuple<object, string, PatchRange>>> defPair, StringBuilder stringBuilder)
         {
             defsAffected.Add(defPair.Key.defName);
             string displayLabel = string.IsNullOrEmpty(defPair.Key.LabelCap) ? defPair.Key.defName : defPair.Key.LabelCap.ToString();
@@ -128,13 +128,14 @@ namespace OskarObnoxious
             fieldsAffected.Clear();
             for (int j = 0; j < Mathf.Min(TTMod.settings.fieldsChangedPerDef, defPair.Value.Count); j++)
             {
-                var objectPair = defPair.Value.Where(p => !fieldsAffected.Contains(p.Second.name)).RandomElementWithFallback();
+                var objectPair = defPair.Value.Where(p => !fieldsAffected.Contains(p.Item3.name)).RandomElementWithFallback();
                 if (objectPair == default)
                 {
                     break;
                 }
-                object parent = objectPair.First;
-                PatchRange patch = objectPair.Second;
+                object parent = objectPair.Item1;
+                string statDefName = objectPair.Item2;
+                PatchRange patch = objectPair.Item3;
                 fieldsAffected.Add(patch.name);
                 object oldValue = patch.FieldInfo.GetValue(parent);
                 float value = patch.NewRandomValue(defPair.Key);
@@ -147,9 +148,10 @@ namespace OskarObnoxious
                 {
                     patch.FieldInfo.SetValue(parent, valueConverted);
                     stringBuilder.AppendLine(patch.PatchNoteChanged(oldValue, valueConverted));
-                    var defPatch = new DefPatchPair(defPair.Key.defName, patch.FieldInfo);
-                    if (!GameComponent_PatchNotes.Instance.currentDefValues.ContainsKey(new DefPatchPair(defPair.Key.defName, patch.FieldInfo)))
+                    var defPatch = new DefPatchPair(defPair.Key.defName, statDefName, patch.FieldInfo);
+                    if (!GameComponent_PatchNotes.Instance.currentDefValues.ContainsKey(defPatch))
                     {
+                        Log.Message($"STORING Def: {defPatch.defName} Field: {patch.DisplayName} Default: {oldValue} Stored: {valueConverted} Parent: {parent}");
                         GameComponent_PatchNotes.Instance.currentDefValues.Add(defPatch, value);
                     }
                     GameComponent_PatchNotes.Instance.currentDefValues[defPatch] = value;
@@ -180,11 +182,11 @@ namespace OskarObnoxious
                     patchableFields.Clear();
                     if (defObj is StatPatchDef statPatchDef && statPatchDef.patch.ApplyToDef(statPatchDef.StatDef))
                     {
-                        BuildDefList(statPatchDef, statPatchDef.StatDef, new List<PatchRange>() { statPatchDef.patch });
+                        BuildDefList(statPatchDef, statPatchDef.StatDef, statPatchDef.patch.DisplayName, new List<PatchRange>() { statPatchDef.patch });
                     }
                     else if (defObj is Def def && !def.generated)
                     {
-                        BuildDefList(def, def, patchDef.fields);
+                        BuildDefList(def, def, null, patchDef.fields);
                     }
                 }
                 CalculateWeightFactors();
@@ -195,7 +197,7 @@ namespace OskarObnoxious
             }
         }
 
-        private static void BuildDefList(Def def, object parent, List<PatchRange> fields)
+        private static void BuildDefList(Def def, object parent, string statDefName, List<PatchRange> fields)
         {
             try
             {
@@ -211,7 +213,7 @@ namespace OskarObnoxious
                             if (baseValue != patch.ignoreIfValue && !patch.originalValues.ContainsKey(def))
                             {
                                 patch.originalValues.Add(def, baseValue);
-                                patchableFields.Add(new Pair<object, PatchRange>(parent, patch));
+                                patchableFields.Add(new Tuple<object, string, PatchRange>(parent, statDefName, patch));
                             }
                         }
                         catch (ArgumentException ex)
@@ -244,7 +246,7 @@ namespace OskarObnoxious
                         object fieldValue = field?.GetValue(parent);
                         if (fieldValue != null)
                         {
-                            BuildDefList(def, fieldValue, fieldTypeDef.fields);
+                            BuildDefList(def, fieldValue, statDefName, fieldTypeDef.fields);
                         }
                     }
                     else if (patch.FieldInfo.FieldType == typeof(List<StatModifier>))
@@ -258,7 +260,7 @@ namespace OskarObnoxious
                                 {
                                     if (statPatchDef.StatDef.defName == stat.stat.defName)
                                     {
-                                        BuildDefList(def, stat, new List<PatchRange>() { statPatchDef.patch });
+                                        BuildDefList(def, stat, statPatchDef.patch.DisplayName, new List<PatchRange>() { statPatchDef.patch });
                                     }
                                 }
                             }
@@ -272,7 +274,7 @@ namespace OskarObnoxious
                             foreach (VerbProperties verb in verbs)
                             {
                                 FieldTypeDef verbTypeDef = nestedTypes[typeof(VerbProperties)];
-                                BuildDefList(def, verb, verbTypeDef.fields);
+                                BuildDefList(def, verb, statDefName, verbTypeDef.fields);
                             }
                         }
                     }
@@ -289,7 +291,7 @@ namespace OskarObnoxious
                     }
                     if (!possibleDefs.ContainsKey(def))
                     {
-                        possibleDefs.Add(def, new List<Pair<object, PatchRange>>());
+                        possibleDefs.Add(def, new List<Tuple<object, string, PatchRange>>());
                     }
                     possibleDefs[def].AddRange(patchableFields);
                 }
@@ -304,7 +306,7 @@ namespace OskarObnoxious
         {
             foreach (Def def in possibleDefs.Keys)
             {
-                List<PatchRange> patches = possibleDefs[def].Select(p => p.Second).ToList();
+                List<PatchRange> patches = possibleDefs[def].Select(p => p.Item3).ToList();
                 float weight = patches.Average(p => p.weightToPatch);
                 defWeights[def] = weight;
             }
