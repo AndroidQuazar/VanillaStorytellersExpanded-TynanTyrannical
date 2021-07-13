@@ -8,7 +8,7 @@ namespace OskarObnoxious
 {
     public static class DebugTools
     {
-        [DebugAction("Oskar Obnoxious", "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction(category = "Oskar Obnoxious", name = "Send Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesSingle()
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
@@ -19,7 +19,7 @@ namespace OskarObnoxious
             GameComponent_PatchNotes.InitiatePatchNotes();
         }
 
-        [DebugAction("Oskar Obnoxious", "Send Specific Patch Note", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction(category = "Oskar Obnoxious", name = "Send Specific Patch Note", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesChoice()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
@@ -71,7 +71,7 @@ namespace OskarObnoxious
 	        Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
         }
 
-        [DebugAction("Oskar Obnoxious", "Send Patch Notes x5", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction(category = "Oskar Obnoxious", name = "Send Patch Notes x5", allowedGameStates = AllowedGameStates.Playing)]
         private static void TestPatchNotesBatch()
         {
             if (!GameComponent_PatchNotes.StorytellerLoaded)
@@ -85,13 +85,13 @@ namespace OskarObnoxious
             }
         }
 
-        [DebugAction("Oskar Obnoxious", "Output PatchTypeDef Data", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction(category = "Oskar Obnoxious", name = "Output PatchTypeDef Data", allowedGameStates = AllowedGameStates.Playing)]
         private static void OutputPatchTypeDefs()
         {
             Utility.OutputAllPatchTypesDefs();
         }
 
-        [DebugAction("Oskar Obnoxious", "Clear Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
+        [DebugAction(category = "Oskar Obnoxious", name = "Clear Patch Notes", allowedGameStates = AllowedGameStates.Playing)]
         private static void ClearPatchNotes()
         {
             GameComponent_PatchNotes.Instance.patchNotes.Clear();
