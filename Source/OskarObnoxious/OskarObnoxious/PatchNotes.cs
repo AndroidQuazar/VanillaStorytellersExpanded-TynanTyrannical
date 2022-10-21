@@ -149,11 +149,6 @@ namespace OskarObnoxious
                     patch.FieldInfo.SetValue(parent, valueConverted);
                     stringBuilder.AppendLine(patch.PatchNoteChanged(oldValue, valueConverted));
                     var defPatch = new DefPatchPair(defPair.Key.defName, statDefName, patch.FieldInfo);
-                    if (!GameComponent_PatchNotes.Instance.currentDefValues.ContainsKey(defPatch))
-                    {
-                        Log.Message($"STORING Def: {defPatch.defName} Field: {patch.DisplayName} Default: {oldValue} Stored: {valueConverted} Parent: {parent}");
-                        GameComponent_PatchNotes.Instance.currentDefValues.Add(defPatch, value);
-                    }
                     GameComponent_PatchNotes.Instance.currentDefValues[defPatch] = value;
                 }
                 else
@@ -167,7 +162,7 @@ namespace OskarObnoxious
         {
             GameComponent_PatchNotes.Instance.RegisterPatch(patchNotes);
             PatchLetter letter = (PatchLetter)LetterMaker.MakeLetter(PatchLetterDefOf.PatchLetter);
-            letter.label = PatchLetterDefOf.PatchLetter.label;
+            letter.def.label = PatchLetterDefOf.PatchLetter.label;
             Find.LetterStack.ReceiveLetter(letter);
         }
 

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MeleeHitChance</defName>
+		<statDef>MeleeHitChance</statDef>
+		<patch>
+			<label>MeleeHitChance</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_MeleeDodgeChance</defName>
+		<statDef>MeleeDodgeChance</statDef>
+		<patch>
+			<label>MeleeDodgeChance</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ShootingAccuracyPawn</defName>
+		<statDef>ShootingAccuracyPawn</statDef>
+		<patch>
+			<label>ShootingAccuracyPawn</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_AimingDelayFactor</defName>
+		<statDef>AimingDelayFactor</statDef>
+		<patch>
+			<label>AimingDelayFactor</label>
+			<range>0.01~2</range>
+			<limits>0.01~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_PawnTrapSpringChance</defName>
+		<statDef>PawnTrapSpringChance</statDef>
+		<patch>
+			<label>PawnTrapSpringChance</label>
+			<range>0~2</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_IncomingDamageFactor</defName>
+		<statDef>IncomingDamageFactor</statDef>
+		<patch>
+			<label>IncomingDamageFactor</label>
+			<range>0.01~2</range>
+			<limits>0.01~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

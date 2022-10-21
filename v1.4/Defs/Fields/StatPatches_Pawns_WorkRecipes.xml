@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_SmeltingSpeed</defName>
+		<statDef>SmeltingSpeed</statDef>
+		<patch>
+			<label>SmeltingSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_GeneralLaborSpeed</defName>
+		<statDef>GeneralLaborSpeed</statDef>
+		<patch>
+			<label>GeneralLaborSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_DrugSynthesisSpeed</defName>
+		<statDef>DrugSynthesisSpeed</statDef>
+		<patch>
+			<label>DrugSynthesisSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_CookSpeed</defName>
+		<statDef>CookSpeed</statDef>
+		<patch>
+			<label>CookSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_FoodPoisonChance</defName>
+		<statDef>FoodPoisonChance</statDef>
+		<patch>
+			<label>FoodPoisonChance</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_DrugCookingSpeed</defName>
+		<statDef>DrugCookingSpeed</statDef>
+		<patch>
+			<label>DrugCookingSpeed</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	
+	<!-- Butchery -->
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ButcheryFleshSpeed</defName>
+		<statDef>ButcheryFleshSpeed</statDef>
+		<patch>
+			<label>ButcheryFleshSpeed</label>
+			<range>0~3</range>
+			<limits>0~1</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ButcheryMechanoidSpeed</defName>
+		<statDef>ButcheryMechanoidSpeed</statDef>
+		<patch>
+			<label>ButcheryMechanoidSpeed</label>
+			<range>0~3</range>
+			<limits>0~1</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ButcheryFleshEfficiency</defName>
+		<statDef>ButcheryFleshEfficiency</statDef>
+		<patch>
+			<label>ButcheryFleshEfficiency</label>
+			<range>0~3</range>
+			<limits>0~1</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ButcheryMechanoidEfficiency</defName>
+		<statDef>ButcheryMechanoidEfficiency</statDef>
+		<patch>
+			<label>ButcheryMechanoidEfficiency</label>
+			<range>0~3</range>
+			<limits>0~1</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

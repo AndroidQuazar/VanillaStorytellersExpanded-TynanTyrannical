@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_NegotiationAbility</defName>
+		<statDef>NegotiationAbility</statDef>
+		<patch>
+			<label>NegotiationAbility</label>
+			<range>0~3</range>
+			<limits>0.4~99999</limits>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_PawnBeauty</defName>
+		<statDef>PawnBeauty</statDef>
+		<patch>
+			<label>PawnBeauty</label>
+			<range>-3~3</range>
+			<toStringStyle>FloatOne</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_ArrestSuccessChance</defName>
+		<statDef>ArrestSuccessChance</statDef>
+		<patch>
+			<label>ArrestSuccessChance</label>
+			<range>0.6~1</range>
+			<limits>0.6~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_TradePriceImprovement</defName>
+		<statDef>TradePriceImprovement</statDef>
+		<patch>
+			<label>TradePriceImprovement</label>
+			<range>0~2</range>
+			<limits>0~2</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_SocialImpact</defName>
+		<statDef>SocialImpact</statDef>
+		<patch>
+			<label>SocialImpact</label>
+			<range>0.2~1</range>
+			<limits>0.2~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_TameAnimalChance</defName>
+		<statDef>TameAnimalChance</statDef>
+		<patch>
+			<label>TameAnimalChance</label>
+			<range>0.01~1</range>
+			<limits>0.01~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_TrainAnimalChance</defName>
+		<statDef>TrainAnimalChance</statDef>
+		<patch>
+			<label>TrainAnimalChance</label>
+			<range>0.01~1</range>
+			<limits>0.01~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentTwo</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>

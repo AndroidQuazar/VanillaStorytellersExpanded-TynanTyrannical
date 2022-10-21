@@ -15,7 +15,9 @@ namespace OskarObnoxious
 
         static Utility()
         {
-            Log.Message($"<color=orange>[OskarObnoxious]</color> version 1.3.0010");
+            Version version = Assembly.GetExecutingAssembly().GetName().Version;
+            string versionString = $"{version.Major}.{version.Minor}.{version.Build}";
+            Log.Message($"<color=orange>[OskarObnoxious]</color> version {versionString}");
             mod = LoadedModManager.RunningMods.FirstOrDefault((ModContentPack mod) => mod.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly()));
             ImportNames();
         }

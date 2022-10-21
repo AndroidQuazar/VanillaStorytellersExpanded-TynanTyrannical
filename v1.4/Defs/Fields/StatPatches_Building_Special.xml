@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_WorkToBuild</defName>
+		<statDef>WorkToBuild</statDef>
+		<patch>
+			<label>WorkToBuild</label>
+			<range>0~3</range>
+			<limits>1~2147483647</limits>
+			<toStringStyle>WorkAmount</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchGenericBase">
+		<defName>StatPatch_DoorOpenSpeed</defName>
+		<statDef>DoorOpenSpeed</statDef>
+		<patch>
+			<label>DoorOpenSpeed</label>
+			<range>0.2~2</range>
+			<limits>0.2~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_BedRestEffectiveness</defName>
+		<statDef>BedRestEffectiveness</statDef>
+		<patch>
+			<label>BedRestEffectiveness</label>
+			<range>0~3</range>
+			<limits>0.4~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_TrapMeleeDamage</defName>
+		<statDef>TrapMeleeDamage</statDef>
+		<patch>
+			<label>TrapMeleeDamage</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<toStringStyle>Integer</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_TrapSpringChance</defName>
+		<statDef>TrapSpringChance</statDef>
+		<patch>
+			<label>TrapSpringChance</label>
+			<range>0~1</range>
+			<limits>0~1</limits>
+			<multiplier>false</multiplier>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_ResearchSpeedFactor</defName>
+		<statDef>ResearchSpeedFactor</statDef>
+		<patch>
+			<label>ResearchSpeedFactor</label>
+			<range>0~3</range>
+			<limits>0.25~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_MedicalTendQualityOffset</defName>
+		<statDef>MedicalTendQualityOffset</statDef>
+		<patch>
+			<label>MedicalTendQualityOffset</label>
+			<range>0~3</range>
+			<limits>0~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_ImmunityGainSpeedFactor</defName>
+		<statDef>ImmunityGainSpeedFactor</statDef>
+		<patch>
+			<label>ImmunityGainSpeedFactor</label>
+			<range>0~3</range>
+			<limits>0.5~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_WorkTableWorkSpeedFactor</defName>
+		<statDef>WorkTableWorkSpeedFactor</statDef>
+		<patch>
+			<label>WorkTableWorkSpeedFactor</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_WorkTableEfficiencyFactor</defName>
+		<statDef>WorkTableEfficiencyFactor</statDef>
+		<patch>
+			<label>WorkTableEfficiencyFactor</label>
+			<range>0~3</range>
+			<limits>0.1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_JoyGainFactor</defName>
+		<statDef>JoyGainFactor</statDef>
+		<patch>
+			<label>JoyGainFactor</label>
+			<range>0~3</range>
+			<limits>0.3~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+	
+	<OskarObnoxious.StatPatchDef ParentName="StatPatchBase">
+		<defName>StatPatch_SurgerySuccessChanceFactor</defName>
+		<statDef>SurgerySuccessChanceFactor</statDef>
+		<patch>
+			<label>SurgerySuccessChanceFactor</label>
+			<range>0~3</range>
+			<limits>1~99999</limits>
+			<toStringStyle>PercentZero</toStringStyle>
+		</patch>
+	</OskarObnoxious.StatPatchDef>
+</Defs>
